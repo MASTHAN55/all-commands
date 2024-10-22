@@ -1,5 +1,5 @@
 jenkins :8080
 tomcat :8080
-nexus: 8081, t2.medium,    (install tomcat and nexus in same server)
+nexus: 8081, t2.medium    //install tomcat and nexus in same server.
 
                                                                                                                                                  
