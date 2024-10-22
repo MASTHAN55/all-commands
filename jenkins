@@ -1,5 +1,6 @@
-jenkins :8080
-tomcat :8080
-nexus: 8081, t2.medium    //install tomcat and nexus in same server.
+jenkins :8080, t2.micro, java-1.8.0,
+tomcat :8080, t2.micro, java-openjdk11, 
+
+nexus: 8081, t2.medium, java-17,     //install tomcat and nexus in same server.
 
                                                                                                                                                  
