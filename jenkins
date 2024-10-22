@@ -1,12 +1,13 @@
 jenkins :8080, t2.micro, java-1.8.0,      //var/lib/jenkins/workspace  default workspace of jenkins.
 tomcat :8080, t2.micro, java-openjdk11, 
-nexus: 8081, t2.medium, java-17,         //install tomcat and nexus in same server.
+nexus: 8081, t2.medium, java-17 or java-11,         //install tomcat and nexus in same server.
+maven: t2.micro, java-1.8.0,             //.m2 default workspace of maven. 
 
 ##Maven..
 1. mvn compile : used to compile the code (.java [src] -- > .class [target])
 2. mvn test    : used to test the code    (.java [test] -- > .class [target])
 3. mvn package : used to create artifact 
-4. mvn install : used to copy artifact to .m2 (project folder -- > .m2)     //.m2 default workspace of maven.
+4. mvn install : used to copy artifact to .m2 (project folder -- > .m2)     
 5. mvn clean   : to delete the target folder
 6. mvn clean package: compile -- > package
 
