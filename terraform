@@ -24,5 +24,5 @@ terraform state show aws_vpc.two                         // show selected info.
 terraform state mv aws_subnet.two aws_subnet.three       // to move state info from one to another.
 terraform state rm aws_subnet.three                      // to remove state info of a resource.
 terraform state pull                                     // to pull state file onfo from backend.
-terraform init -migrate-state                            // store info to s3 bucket...   [got to official web "backend code:s3" for code]
+terraform init -migrate-state -auto-approve              // store info to s3 bucket...   [got to official web "backend code:s3" for code]
 
