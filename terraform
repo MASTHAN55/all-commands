@@ -19,10 +19,11 @@ terraform workspace select dev     // switch to dev workspace.
 terraform workspace list           // to list workspace.
 terraform workspace new dev        // creating new workspace.
 terraform workspace show           // show current workspace.
+terraform workspace delete dev     // delete dev workspace.
 
 terraform state show aws_vpc.two                         // show selected info.
 terraform state mv aws_subnet.two aws_subnet.three       // to move state info from one to another.
 terraform state rm aws_subnet.three                      // to remove state info of a resource.
-terraform state pull                                     // to pull state file onfo from backend.
-terraform init -migrate-state -auto-approve              // store info to s3 bucket...   [got to official web "backend code:s3" for code]
+terraform state pull                                     // just print info form s3-bucket.
+terraform init -migrate-state -auto-approve              // store info to s3 bucket...   [got to official web "backend code:s3" for code].
 
