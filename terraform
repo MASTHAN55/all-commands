@@ -1,8 +1,9 @@
-terrform init       // download pluggins (.terraform, .terraform.lock.hcl)
-terrform plan       // 
-terrfom apply
-terraform applay -auto-approve   // for all
-terraform fmt      //create structor
+terrform init       // download pluggins in (.terraform )... (.terraform.lock.hcl).
+terrform plan       // creating an execution plan.
+terrfom apply       // to create resource (created_EC2).
+terraform destroy   // destroy the server.
+terraform fmt       // create structor.
+
 
 terraform plan -var-file="dev.tfvars"
 terraform apply -var-file="dev.tfvars" -auto-approve
