@@ -4,8 +4,25 @@ terrfom apply       // to create resource (created_EC2).
 terraform destroy   // destroy the server.
 terraform fmt       // create structor.
 
+terraform destroy -target="aws_instance.one[3]" --auto-approve                                  // destroy singe target.
+terraform destroy -target="aws_instance.one[5]" -target="aws_instance.two[2]"--auto-approve     // destroy multi target.
 
-terraform plan -var-file="dev.tfvars"
-terraform apply -var-file="dev.tfvars" -auto-approve
-terraform destroy -var-file="dev.tfvars" -auto-approve   // 
-terraform apply --auto-approve -replace="aws_instance.one[0]"
+
+terraform plan -var-file="dev.tfvars"                             // plan selected 
+terraform apply -var-file="dev.tfvars" -auto-approve              // creating resources for dev-server.
+terraform destroy -var-file="dev.tfvars" -auto-approve            // destroy the dev-server
+terraform apply -replace="aws_instance.one[0]" --auto-approve     // recreate selected one.
+terraform taint aws_vpc.one[0]                                    // recreate selected resource. 
+
+terraform state list               // list the resources.
+terraform workspace select dev     // switch to dev workspace.
+terraform workspace list           // to list workspace.
+terraform workspace new dev        // creating new workspace.
+terraform workspace show           // show current workspace.
+
+terraform state show aws_vpc.two                         // show selected info.
+terraform state mv aws_subnet.two aws_subnet.three       // to move state info from one to another.
+terraform state rm aws_subnet.three                      // to remove state info of a resource.
+terraform state pull                                     // to pull state file onfo from backend.
+terraform init -migrate-state                            // store info to s3 bucket.
+
