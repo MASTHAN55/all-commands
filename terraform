@@ -4,8 +4,8 @@ terrfom apply       // to create resource (created_EC2).
 terraform destroy   // destroy the server.
 terraform fmt       // create structor.
 
-terraform destroy -target="aws_instance.one[3]" --auto-approve                                  // destroy singe target.
-terraform destroy -target="aws_instance.one[5]" -target="aws_instance.two[2]"--auto-approve     // destroy multi target.
+terraform destroy -target="aws_instance.one[3]" --auto-approve                                  // destroy singe target resource.
+terraform destroy -target="aws_instance.one[5]" -target="aws_instance.two[2]"--auto-approve     // destroy multi target resources.
 
 
 terraform plan -var-file="dev.tfvars"                             // plan selected 
