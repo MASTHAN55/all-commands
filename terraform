@@ -28,3 +28,5 @@ terraform state pull                                     // just print info form
 terraform init -migrate-state -auto-approve              // store info to s3 bucket...   [got to official web "backend code:s3" for code].
 terraform init -upgrate                                  // upgrate new version. 
 
+terraform providers                                      // show all providers. 
+terraform refresh                                        // refresh the state file 
