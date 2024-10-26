@@ -29,4 +29,5 @@ terraform init -migrate-state -auto-approve              // store info to s3 buc
 terraform init -upgrate                                  // upgrate new version. 
 
 terraform providers                                      // show all providers. 
-terraform refresh                                        // refresh the state file 
+terraform refresh                                        // refresh the state file.
+terraform plan -generate-config-out=ec2.tf               // generated__ by Terraform (cat ec2.tf).
