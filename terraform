@@ -30,4 +30,4 @@ terraform init -upgrate                                  // upgrate new version.
 
 terraform providers                                      // show all providers. 
 terraform refresh                                        // refresh the state file.
-terraform plan -generate-config-out=ec2.tf               // generated__ by Terraform (cat ec2.tf).
+terraform plan -generate-config-out=ec2.tf               // transfor info server to terraform, generated__ by Terraform (cat ec2.tf).
