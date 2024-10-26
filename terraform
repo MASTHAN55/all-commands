@@ -26,4 +26,5 @@ terraform state mv aws_subnet.two aws_subnet.three       // to move state info f
 terraform state rm aws_subnet.three                      // to remove state info of a resource.
 terraform state pull                                     // just print info form s3-bucket.
 terraform init -migrate-state -auto-approve              // store info to s3 bucket...   [got to official web "backend code:s3" for code].
+terraform init -upgrate                                  // upgarte new version. 
 
