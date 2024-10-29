@@ -35,9 +35,11 @@ ansible all -m yum -a "name=git state=absent"            // un-install git.
 ansible all -m yum -a "name=httpd state=present"         // installing apache.
 ansible all -m service -a "name=httpd state=started"     // starting httpd.
 
-ansible all -m user -a "name=masthan state=present"      // creating user
-ansible all -m group -a "name=devops state=present"      // creating group
-
+ansible all -m user -a "name=masthan state=present"      // creating user.
+ansible all -m group -a "name=devops state=present"      // creating group.
+ansible-playbook masthan.yml                             // eacute masthan.yml.
+ansible-playbook masthan.yml --tags c,d                  // to execute the particular tags.
+ansible-playbook masthan.yml --skip-tags a,b             // skip selected tags.
 
 
 
