@@ -3,6 +3,7 @@ passwd root                                                         // set passw
 vim /etc/ssh/sshd_config  (38,61)-uncommit                          // giving root_user login permmisions.
 systemctl restart sshd                                              // restart sshd (mandatory).        
 systemctl ststus sshd
+
 hostname -i                                                         // showing private_id.
 amazon-linux-extras install ansible2 -y                             // install ansible.
 yum install python3 python-pip python-dlevel -y                     
