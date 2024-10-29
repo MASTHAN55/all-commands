@@ -23,4 +23,22 @@ ll .ssh/                                          // showing (id_rsa, id_rsa.pub
 ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server.
 ssh paste ip_adderss of dev-server                // connection complete ansible to dev.
 
+-----------------------------------------------------------------------------------
+## ADHOC_COMMANDS
+ansible all -a "yum install git -y"               // installing git at a time all servers.
+ansible all -a "git -version"                     // checking version all servers.
+
+## module.
+ansible all -m yum -a "name=git state=present"           // installing git.
+ansible all -m yum -a "name=git state=absent"            // un-install git.
+
+ansible all -m yum -a "name=httpd state=present"         // installing apache.
+ansible all -m service -a "name=httpd state=started"     // starting httpd.
+
+ansible all -m user -a "name=masthan state=present"      // creating user
+ansible all -m group -a "name=devops state=present"      // creating group
+
+
+
+
 
