@@ -43,6 +43,14 @@ ansible-playbook masthan.yml --skip-tags a,b             // skip selected tags.
 ansible all -a "cat /etc/passwd"                         // showing list of users. 
 
 ansible all -m ping                                   // check ssh connection connect are not.
+ansible-vault encrypt masthan.yml                     // encrypt the data.
+ansible-vault decrypt masthan.yml                     // decrypt the data. 
+ansible-vault view  masthan.yml                       // show encrypt data without desrypt. 
+ansible-vault rekey masthan.yml                       // reset a apassword
+
+ansible-vault create vali.yml                         // auto-decrypt.
+ansible-vault view vali.yml                           // 
+
 
 
 
