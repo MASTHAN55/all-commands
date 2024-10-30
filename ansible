@@ -42,6 +42,7 @@ ansible-playbook masthan.yml --tags c,d                  // to execute the parti
 ansible-playbook masthan.yml --skip-tags a,b             // skip selected tags.
 ansible all -a "cat /etc/passwd"                         // showing list of users. 
 
+ansible all -m ping                                   // check ssh connection connect are not.
 
 
 
