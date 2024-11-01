@@ -1,0 +1,20 @@
+yum install docker -y                 // installing docker.
+systemctl start docker                // start docker. 
+systemctl status docker               // check the status.
+docker images                         // show all images.
+docker ls -a                          // cintainers list.
+
+docker pull ubuntu                         // installing ubuntu server.
+docker run -it --name cont2 ubuntu         // create a container.
+docker start cont1                         // use for starting cont1.
+docker stop cont1                          // use for stop cont1.
+docker kill cont1                          // for immidiate stoping.
+docker inspect cont1                       // show all onfo.
+docker attach cont1                        // switch to cont1.
+ctrl+d                                     // exit the container.
+docker rm cont1                            // remoe the container.
+  
+docker pause cont1                         // pause cont1
+docker unpause cont1                       // unpause cont1.
+
+
