@@ -3,18 +3,25 @@ systemctl start docker                // start docker.
 systemctl status docker               // check the status.
 docker images                         // show all images.
 docker ls -a                          // cintainers list.
+docker ps                             // show containers list.
 
-docker pull ubuntu                         // installing ubuntu server.
-docker run -it --name cont2 ubuntu         // create a container.
+docker pull ubuntu                         // installing image.
+docker run -it --name cont2 ubuntu         // creating a container(cont2) from ubuntu server.
+docker run -it --name cont2 cont1:v1       // creating cont2 with cont1:v1 image.
 docker start cont1                         // use for starting cont1.
-docker stop cont1                          // use for stop cont1.
+docker stop cont1                          // use for stoping cont1.
 docker kill cont1                          // for immidiate stoping.
-docker inspect cont1                       // show all onfo.
-docker attach cont1                        // switch to cont1.
-ctrl+d                                     // exit the container.
-docker rm cont1                            // remoe the container.
+
+docker inspect cont1                       // show all onfo of cont1.
+docker attach cont2                        // switch to cont2.
+ctrl+d                                     // exit but container stoped.
+ctrl+pq                                    // exit but container running.
+docker rm cont1                            // remove the container.
   
-docker pause cont1                         // pause cont1
+docker pause cont1                         // pause cont1.
 docker unpause cont1                       // unpause cont1.
+docker commit cont1 masthan:v1             // backup info cont1 to masthan:v1.
+
+
 
 
