@@ -21,7 +21,12 @@ docker rm cont1                            // remove the container.
 docker pause cont1                         // pause cont1.
 docker unpause cont1                       // unpause cont1.
 docker commit cont1 masthan:v1             // backup info cont1 to masthan:v1.
+docker rmi -f $(docker images -qa)         // 
+docker kill $(docker ps -qa)               //
+docker rm $(docker ps -qa)                 // 
+docker build -t masthan:v1 .               // execute dockerfile with masthan:v1 container.
+  
+docker run -it --name cont9--cpus="0.1" --memory="100mb" "masthan:v1"                             // restrict the memory and ram.
+docker update --cpus="0.2" --memory="200" "masthan:v1"                                            // update cpus and memory size.
 
-
-
-
+  
