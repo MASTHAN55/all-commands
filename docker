@@ -27,7 +27,7 @@ docker kill $(docker ps -qa)               // kill containers at a time.
 docker rm $(docker ps -qa)                 //  remove all containers at a time.
 docker build -t masthan:v1 .               // execute dockerfile with masthan:v1 container.
   
-docker run -it --name cont9--cpus="0.1" --memory="100mb" "masthan:v1"                             // restrict the memory and ram.
-docker update --cpus="0.2" --memory="200" "masthan:v1"                                            // update cpus and memory size.
+docker run -it --name cont9 --cpus="0.1" --memory="100mb" "masthan:v1"                             // restrict the memory and ram.
+docker update --cpus="0.2" --memory="200" "masthan:v1"                                             // update cpus and memory size.
 
   
