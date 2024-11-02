@@ -41,6 +41,25 @@ docker run -it --name cont00 --mount source=volume00,destination=/abc ubuntu    
 cp * (copy mount path of volume)  {do root user}                                                    // copy files from local to volume.
 cp * /root/      {do mount path user}                                                               // copy files from volume to local.
 docker run -it --name cont6 -v /root/:xyz ubuntu                                                    // copy files from local to cont6 at a time.
+docker run -it --name -p 8080:8080 jenkins/jenkins:lts                                              // installing jenkins.
+
+________________________________________________________________________________________________________________________________________________________________
+docker system df                      // all info of (cont,images,volumes,build cache).
+docker system df -v                   // all info (cont,images,volumes,build cache)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
