@@ -6,7 +6,7 @@ docker ps -a                          // show all containers list.
 docker ps                             // show running containers list.
 
 docker pull ubuntu                         // installing image.
-docker run -it --name cont1 ubuntu         // creating a container(cont2) from ubuntu server.
+docker run -it --name cont1 ubuntu         // creating a container(cont1) from ubuntu server.
 docker run -it --name cont2 cont1:v1       // creating cont2 with cont1:v1 image.
 docker start cont1                         // use for starting cont1.
 docker stop cont1                          // use for stoping cont1.
@@ -49,6 +49,9 @@ docker exec -it cont1 /bin/bash  (use after start container)                    
 ________________________________________________________________________________________________________________________________________________________________
 docker system df                      // all info of (cont,images,volumes,build cache).
 docker system df -v                   // all info (cont,images,volumes,build cache)
+
+------------------------------------------------------------ DOCKER-COMPOSE ----------------------------------------------------------------
+
 
 
 
