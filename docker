@@ -80,7 +80,7 @@ docker push masthan733/movies
 ## COMPRESSING IMAGES:
 du -sh                                                         // show filesize.
 docker save masthan733/facebook:v1 -o abc.tar                  // convert to tar file
-gzip abc.tar abc.tar.gz                                        // conver to tar to gz file. 
+gzip abc.tar abc.tar.gz                                        // convet to tar to gz file. 
 
 
 
