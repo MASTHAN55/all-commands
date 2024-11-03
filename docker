@@ -82,9 +82,12 @@ du -sh                                                         // show filesize.
 docker save masthan733/facebook:v1 -o abc.tar                  // convert to tar file
 gzip abc.tar abc.tar.gz                                        // convert to tar to gz file. 
 
+=========================================================== SWARM =================================================================
+
 docker swarm init (manager)                                    // install swarm plugins. 
 -- > copy-paste the token to worker nodes
 docker node ls                                                 // show all connected nodes.
+docker swarm leave -f                                          // 
 
 docker service create --name movies --replicas 3 -p 81:80 masthan733/movies:latest              //  
 docker service ls                                    // show all servers.
