@@ -51,7 +51,8 @@ docker system df                      // all info of (cont,images,volumes,build 
 docker system df -v                   // all info (cont,images,volumes,build cache)
 
 ------------------------------------------------------------ DOCKER-COMPOSE ----------------------------------------------------------------
-
+docker-compose up -d		                 // to create and start all containers
+docker-compose stop		                   //  to stop all containers
 
 
 
