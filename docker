@@ -52,7 +52,7 @@ docker system df -v                   // all info (cont,images,volumes,build cac
 
 ------------------------------------------------------------ DOCKER-COMPOSE ----------------------------------------------------------------
 
-docker-compose up -d	                 // to create and start all containers
+docker-compose up -d	                 // to create and start all at a time containers
 docker-compose stop		                 // to stop all containers
 docker-compose start		               // to start all containers
 docker-compose kill		                 // to kill all containers
