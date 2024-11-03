@@ -50,7 +50,7 @@ docker exec -it cont1 /bin/bash  (use after start container)                    
 docker system df                      // all info of (cont,images,volumes,build cache).
 docker system df -v                   // all info (cont,images,volumes,build cache).
 
-=================================================== DOCKER-COMPOSE ====================================================================
+=================================================== (DOCKER-COMPOSE) ====================================================================
 
 docker-compose up -d                 // to create and start all containers.
 docker-compose stop                  // stop all containers.
@@ -69,7 +69,7 @@ docker-compose top                   // to show the process of compose container
 docker-compose restart               // to restart all the compose containers.
 docker-compose scale train=10        // to scale the service.
 
-===================================================== DOCKER_HUB =================================================
+===================================================== (DOCKER_HUB) =================================================
 
 ## DOCKER LOGIN PROCESES.
 docker login -- > username and password
@@ -92,6 +92,12 @@ docker service ps movies                             // list the containers of m
 dokcer service inspect movies                        // complete info of movies service.
 docker service scale movies=10	                     // to scale in the containers (increase service).
 docker service scale movies=3	                       // to scale out the containers (decrease service).
+
+docker service scale movies=3	: to scale out the containers
+docker service rollback movies	: to go previous state
+docker service logs movies	: to see the logs
+docker service rm movies	: to delete the services.
+
 
 
 
