@@ -91,7 +91,7 @@ docker service ls                                    // show all servers.
 docker service ps movies                             // list the containers of movies.
 dokcer service inspect movies                        // complete info of movies service.
 docker service scale movies=10	                     // to scale in the containers (increase service).
-docker service scale movies=3	                       // to scale out the containers (decrease service).
+docker service scale movies=3	                      // to scale out the containers (decrease service).
 
 docker service scale movies=3	: to scale out the containers
 docker service rollback movies	: to go previous state
