@@ -10,7 +10,7 @@ docker run -it --name cont1 ubuntu         // creating a container(cont1) from u
 docker run -it --name cont2 cont1:v1       // creating cont2 with cont1:v1 image.
 docker start cont1                         // use for starting cont1.
 docker stop cont1                          // use for stoping cont1.
-docker kill cont1                          // for immidiate stoping.
+docker kill cont1                          // for immediate stoping.
 docker rmi -f masthan:v1                   // remove image perminently.
 
 docker inspect cont1                       // show all onfo of cont1.
@@ -48,10 +48,9 @@ docker exec -it cont1 /bin/bash  (use after start container)                    
 
                ------------------------------------------------------------------------------------------------------------------------------------
 docker system df                      // all info of (cont,images,volumes,build cache).
-docker system df -v                   // all info (cont,images,volumes,build cache)
+docker system df -v                   // all info (cont,images,volumes,build cache).
 
-
------------------------------------------------------------- DOCKER-COMPOSE ----------------------------------------------------------------
+=================================================== DOCKER-COMPOSE ====================================================================
 
 docker-compose up -d                 // to create and start all containers.
 docker-compose stop                  // stop all containers.
@@ -70,7 +69,18 @@ docker-compose top                   // to show the process of compose container
 docker-compose restart               // to restart all the compose containers.
 docker-compose scale train=10        // to scale the service.
 
+===================================================== DOCKER_HUB =================================================
 
+## DOCKER LOGIN PROCESES.
+docker login -- > username and password
+docker tag movies:v1 masthan733/movies
+docker push masthan733/movies
+
+
+## COMPRESSING IMAGES:
+du -sh                                                         // show filesize.
+docker save masthan733/facebook:v1 -o abc.tar                  // convert to tar file
+gzip abc.tar abc.tar.gz                                        // conver to tar to gz file. 
 
 
 
