@@ -87,7 +87,7 @@ docker-compose scale train=10        // to scale the service.
 ===================================================== (DOCKER_HUB) =================================================
 
 ## DOCKER LOGIN PROCESES.
-docker login -- > username and password
+docker login -- > username and password, create one repo movies (docker hub)
 docker tag movies:v1 masthan733/movies
 docker push masthan733/movies
 
