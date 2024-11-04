@@ -7,7 +7,9 @@ docker ps                             // show running containers list.
 docker rename  cont1 cont2            // rename cont1 to cont2.
 
 
-FROM		// used to base image
+FROM		// used to base image.
+RUN		  // used to run linux commands (During image creation)
+
 
 
 docker pull ubuntu                         // installing image.
