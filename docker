@@ -6,11 +6,17 @@ docker ps -a                          // show all containers list.
 docker ps                             // show running containers list.
 docker rename  cont1 cont2            // rename cont1 to cont2.
 
-
-FROM		// used to base image.
-RUN		 // used to run linux commands (During image creation)
-
-
+FROM          // used to base image.
+RUN           // used to run run linux commands(During image creation).
+CMD           // used to run run linux commands(After image creation).
+ENTRYPOINT    // high priority than cmd.
+COPY          // to copy local files to conatiner.
+ADD           // to copy internet files to conatiner.
+WORKDIR       // to open req directory.
+LABEL         // to add labels for docker images.
+ENV           // to set env variables (inside container).
+ARGS          // to pass env variables (outside containers).
+EXPOSE        // to give port number.
 
 docker pull ubuntu                         // installing image.
 docker run -it --name cont1 ubuntu         // creating a container(cont1) from ubuntu server.
