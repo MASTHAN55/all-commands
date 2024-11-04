@@ -87,7 +87,8 @@ docker-compose scale train=10        // to scale the service.
 ===================================================== (DOCKER_HUB) =================================================
 
 ## DOCKER LOGIN PROCESES.
-docker login -- > username and password, create one repo movies (docker hub)    // optional.
+docker login -- > username and password
+create repo movies (docker hub)    // optional.
 docker tag movies:v1 masthan733/movies
 docker push masthan733/movies
 
@@ -116,6 +117,19 @@ docker service rollback movies	: to go previous state
 docker service logs movies	: to see the logs
 docker service rm movies	: to delete the services.
 
+============================================================= NETWORK ======================================================
+docker netework ls            // show all networks.
+docker network create masthan 
+docker network inspect
+docker run -itd  --name cont1 -p 81:80 masthan733/movies:v1
+docker inspect cont1 
+
+docker network connect cont masthan 
+docker exec -it cont1 /bin/bash                    // login cont1 server.
+apt install iputils-ping -y                        // install ping package.
+ping [ip-adderss of server]                        // connecting to server.
+docker network disconnect cont masthan             // disconnect to server.
+docker network rm masthan                          // remove network.
 
 
 
