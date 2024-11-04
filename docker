@@ -4,6 +4,7 @@ systemctl status docker               // check the status.
 docker images                         // show all images.
 docker ps -a                          // show all containers list.
 docker ps                             // show running containers list.
+docker rename  cont1 cont2            // rename cont1 to cont2.
 
 docker pull ubuntu                         // installing image.
 docker run -it --name cont1 ubuntu         // creating a container(cont1) from ubuntu server.
