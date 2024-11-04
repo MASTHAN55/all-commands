@@ -6,6 +6,10 @@ docker ps -a                          // show all containers list.
 docker ps                             // show running containers list.
 docker rename  cont1 cont2            // rename cont1 to cont2.
 
+
+FROM		// used to base image
+
+
 docker pull ubuntu                         // installing image.
 docker run -it --name cont1 ubuntu         // creating a container(cont1) from ubuntu server.
 docker run -it --name cont2 cont1:v1       // creating cont2 with cont1:v1 image.
