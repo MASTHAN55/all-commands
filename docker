@@ -51,14 +51,13 @@ docker volume create volume3                  // create volume with volume3 name
 docker volume inspect volume3                 // all info of volume3 (mount-path of volume3).
 docker volume rm volume3                      // remove volume.
 
-docker run -it --name cont00 --mount source=volume00,destination=/abc ubuntu              // mount created volume(volume00) to container(cont00).
 docker run -it --name cont3 -v volume2 ubuntu                                             // create cont3 and volume (CLI - method).
 docker run -it --name cont4 --volumes-from cont3 ubuntu                                   // copy volumes cont4 to cont3 (CLI -method). 
 docker run -it --name cont5 --mount cont7 source=volume3,destination=/abc ubuntu          // copy volumes from cont7 to cont5. (do mount path of volume3)
 
 cp * (copy mount path of volume)  {do root user}                                          // copy files from local to volume.
 cp * /root/      {do mount path user}                                                     // copy files from volume to local.
-docker run -it --name cont6 -v /root/:/xyz ubuntu                                         // copy files from local to cont6 at a time.
+docker run -it --name cont6 -v /root/:/xyz ubuntu                                         // copy root files from local to cont6 at a time.
 docker run -it --name jenkins -p 8080:8080 jenkins/jenkins:lts                            // installing jenkins.
 docker exec -it cont1 /bin/bash  (use after start container)                              // login to container.
 
