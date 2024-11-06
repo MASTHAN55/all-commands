@@ -1,29 +1,3 @@
-cerate "5-servers" (1-ansible, 2-dev_servers, 2-test_server).
-passwd root                                                         // set password for root user.
- 
-##Security shell.
-vim /etc/ssh/sshd_config  (38,61)-uncommit                          // giving root_user login permmisions.
-systemctl restart sshd                                              // restart sshd (mandatory).        
-systemctl ststus sshd
-hostname -i                                                         // showing private_id.
-
-amazon-linux-extras install ansible2 -y                             // install ansible.
-yum install python3 python-pip python-dlevel -y                     
-
-vim /etc/ansible/hosts                                              // go to ansible inventory file (or) path.
-[dev]  (12-line)                                                    // adding ip_adderses inventory file (or) path.
-paste ip-adderss of dev_server-1
-paste ip-adderss of dev_server-2
-[test]
-paste ip_adderss of test_server-1
-paste ip-adderss of test_server-2
-
-ssh-keygen                                        // generating a new key.
-ll .ssh/                                          // showing (id_rsa, id_rsa.pub).
-ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server.
-ssh paste ip_adderss of dev-server                // connection complete ansible to dev.
-
------------------------------------------------------------------------------------
 ## ADHOC_COMMANDS
 ansible all -a "yum install git -y"               // installing git at a time all servers.
 ansible all -a "git -version"                     // checking version all servers.
