@@ -1,3 +1,25 @@
+1.imprative way (manual):
+ * kubectl run pod1 --image nginx        // creating pod1
+ * kubectl get po                        // list all pods
+ * kubectl get pod -o wide               // info of pods
+ * kubectl describe pod pod1             // all info of pod1
+ * kubectl delete pod pod1               // delete pod1
+
+2.decralative way (manifest file -automate):
+  vim pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+spec:
+  containers:
+    - name: cont1
+      image: nginx
+
+* kubectl create -f pod.yml          // creating pod.
+* kubectl api-resources              // show all shortcuts.
+
+
 
 
 
