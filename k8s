@@ -19,8 +19,12 @@
 4.deployment (roling statagy).
   * kubectl get deploy                        // show all depolyment list.
   * kubectl get deploy -o deploy              // sho wall onfo of deploy.
-  * kubectl edit deploy/movies                // edit 
+  * kubectl edit deploy/movies                // edit  
   * kubectl roolout history deploy/movies     // 
+  * kubectl rollout undo deploy/movies        // 
+  * kubectl rollout status deploy/movies      // 
+  * kubectl rollout pause deploy/movies       // 
+  * kubectl rollout resume deploy.movies      // 
 
 
 
