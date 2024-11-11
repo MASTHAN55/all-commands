@@ -16,8 +16,11 @@ spec:
     - name: cont1
       image: nginx
 
-* kubectl create -f pod.yml          // creating pod.
-* kubectl api-resources              // show all shortcuts.
+ * kubectl create -f pod.yml          // creating pod.
+ * kubectl api-resources              // show all shortcuts.
+
+3.peplikaset(rs):
+
 
 
 
