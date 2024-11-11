@@ -1,54 +1,26 @@
 1.imprative way (manual):
- * kubectl run pod1 --image nginx        // creating pod1
- * kubectl get po                        // list all pods
- * kubectl get pod -o wide               // info of pods
- * kubectl describe pod pod1             // all info of pod1
- * kubectl delete pod pod1               // delete pod1
+  * kubectl run pod1 --image nginx        // creating pod1
+  * kubectl get po                        // list all pods
+  * kubectl get pod -o wide               // info of pods
+  * kubectl delete pod pod1               // delete pod1
 
 2.decralative way (manifest file -automate):
-  vim pod.yml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: pod1
-spec:
-  containers:
-    - name: cont1
-      image: nginx
-
- * kubectl create -f pod.yml          // creating pod.
- * kubectl api-resources              // show all shortcuts.
-
+  * kubectl create -f pod.yml             // creating pod.
+  * kubectl api-resources                 // show all shortcuts.
+============================================================================= [REPLICASET] =============================================================================  
 3.peplikaset(rs):
-   vim pod.yml
-kind: ReplicaSet
-metadata:
-  name: shaik2
-  labels:
-    app: vali
-    tier: vali
-spec:
-  # modify replicas according to your case
-  replicas: 3
-  selector:
-    matchLabels:
-      tier: vali
-  template:
-    metadata:
-      labels:
-        tier: vali
-    spec:
-      containers:
-      - name: cont10
-        image: masthan733/trainrepo
+  * kubectl get po --show-labels              // show labels of pod.
+  * kubectl describe po -l tier=vali          // show only tier=vali labels of pod.
+  * kubectl delete pod -l tier!=vali          // delete pods.
+  * kubectl delete po pod1                    // for delete pod.
+  * kubectl scale rc/movies --replicas=10     // create 10 pods at a time.
 
- * kubectl get po --show-labels              // show labels of pod.
- * kubectl describe po -l tier=vali          // show only tier=vali labels of pod.
- * kubectl delete pod -l tier!=vali          // delete pods.
- * kubectl delete po pod1                    // for delete pod.
- * kubectl scale rc/movies --replicas=10     // create 10 pods at a time.
-
-
+============================================================================== [DEPLOYMENT] ===============================================================================
+4.deployment (roling statagy).
+  * kubectl get deploy                        // show all depolyment list.
+  * kubectl get deploy -o deploy              // sho wall onfo of deploy.
+  * kubectl edit deploy/movies                // edit 
+  * kubectl roolout history deploy/movies     // 
 
 
 
