@@ -20,7 +20,33 @@ spec:
  * kubectl api-resources              // show all shortcuts.
 
 3.peplikaset(rs):
+   vim pod.yml
+kind: ReplicaSet
+metadata:
+  name: shaik2
+  labels:
+    app: vali
+    tier: vali
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: vali
+  template:
+    metadata:
+      labels:
+        tier: vali
+    spec:
+      containers:
+      - name: cont10
+        image: masthan733/trainrepo
 
+ * kubectl get po --show-labels              // show labels of pod.
+ * kubectl describe po -l tier=vali          // show only tier=vali labels of pod.
+ * kubectl delete pod -l tier!=vali          // delete pods.
+ * kubectl delete po pod1                    // for delete pod.
+ * kubectl scale rc/movies --replicas=10     // create 10 pods at a time.
 
 
 
