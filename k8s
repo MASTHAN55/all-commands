@@ -46,8 +46,9 @@
   * kops updata cluster --name masthan.k8s nodes-us-east-1a     // updating cluster.
   * kops rolling-update cluster                                 // after update.
 
-  * kops edit ig --name=masthan.k8s nodes-us-east-1a            // for delete cluster.
+  * kops edit ig --name=masthan.k8s nodes-us-east-1a            // .
   * kops update --name=masthan.k8s.local --yes --admin          // update cluster. 
+  * kops delete cluster --namemasthan.k8s.local --yes           // for delete cluster.
 
 ==============================================================================[SERVICE]=============================================================================================
    
