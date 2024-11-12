@@ -25,6 +25,27 @@
   * kubectl rollout status deploy/movies      // 
   * kubectl rollout pause deploy/movies       // 
   * kubectl rollout resume deploy.movies      // 
+========================================================================[NAME-SPACESES]====================================================================================================
+5.
+  * kubectl create ns dev     // create dev name space.
+  * kubectl get ns            // list all name spaces.
+  * kubectl po -A             // show all pods.
+
+  * kubectl config set-context --current --namespace=dev        // switch one name space to dev name space.
+  * kubectl config view                                         // show current name space.
+  * kubectl run dev3 --image=masthan733/paytm:latest            //  create dev3 pod.
+  * kubetcl get po -n dev                                       // show particular namespace 
+
+  * kubectl delete pod dev1 -n dev                              // delete pod in dev name space.
+  * kubectl delete pod --all                                    // delete all pods.
+  * kubectl delete ns dev                                       // delete dev namespace.
+
+
+  * 
+
+
+
+
 
 
 
