@@ -39,9 +39,8 @@
   * kubectl delete pod dev1 -n dev                              // delete pod in dev name space.
   * kubectl delete pod --all                                    // delete all pods.
   * kubectl delete ns dev                                       // delete dev namespace.
-
-
-  * 
+  * kubectl delete po --all -n dev                              // delete all in dev name space.
+   
 
 
 
