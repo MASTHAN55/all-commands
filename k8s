@@ -5,7 +5,7 @@
   * kubectl delete pod pod1               // delete pod1
 
 2.decralative way (manifest file -automate):
-  * kubectl create -f pod.yml             // creating pod.
+  * kubectl create -f pod.yml             // executing file & creating pod.
   * kubectl api-resources                 // show all shortcuts.
 ============================================================================= [REPLICASET] =============================================================================  
 3.peplikaset(rs):
@@ -25,7 +25,7 @@
   * kubectl rollout status deploy/movies      // 
   * kubectl rollout pause deploy/movies       // 
   * kubectl rollout resume deploy.movies      // 
-========================================================================[NAME-SPACESES]====================================================================================================
+=============================================================================[NAME-SPACESES]====================================================================================================
 5.
   * kubectl create ns dev     // create dev name space.
   * kubectl get ns            // list all name spaces.
@@ -33,13 +33,19 @@
 
   * kubectl config set-context --current --namespace=dev        // switch one name space to dev name space.
   * kubectl config view                                         // show current name space.
-  * kubectl run dev3 --image=masthan733/paytm:latest            //  create dev3 pod.
-  * kubetcl get po -n dev                                       // show particular namespace 
+  * kubectl run dev3 --image=masthan733/paytm:latest            // create pod in dev3 namespace.
+  * kubetcl get po -n dev                                       // list dev namespace onfo. 
 
   * kubectl delete pod dev1 -n dev                              // delete pod in dev name space.
   * kubectl delete pod --all                                    // delete all pods.
   * kubectl delete ns dev                                       // delete dev namespace.
   * kubectl delete po --all -n dev                              // delete all in dev name space.
+
+  * kops edit ig --name=masthan.k8s nodes-us-east-1a            // editing cluster
+  * kops updata cluster --name masthan.k8s nodes-us-east-1a     // updating cluster
+  * kops delete cluster --name masthan.k8s.local --yes          // for delete cluster.
+
+==============================================================================[SERVICE]=============================================================================================
    
 
 
