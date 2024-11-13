@@ -40,15 +40,18 @@
   * kubectl delete pod --all                                    // delete all pods.
   * kubectl delete ns dev                                       // delete dev namespace.
   * kubectl delete po --all -n dev                              // delete all in dev name space.
-
+============================================================================= [kops] =================================================================================
+  * kubectl get no                                              // show all nodes.
+  * 
   * kops edit ig --name=masthan.k8s nodes-us-east-1a            // editing node instance group.
   * kops edit ig --name=masthan.k8s master-us-east-1a           // editing master instance group.
   * kops updata cluster --name masthan.k8s nodes-us-east-1a     // updating cluster.
-  * kops rolling-update cluster                                 // after update.
+  * kops rolling-update cluster                                 // Do after update.
 
-  * kops edit ig --name=masthan.k8s nodes-us-east-1a            // .
   * kops update --name=masthan.k8s.local --yes --admin          // update cluster. 
   * kops delete cluster --namemasthan.k8s.local --yes           // for delete cluster.
+
+  * kops delete cluster --name masthan641.k8s.local --state=s3://masthan641.k8s.local --yes   // delete total cluster at a time.
 
 ==============================================================================[SERVICE]=============================================================================================
    
