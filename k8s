@@ -54,7 +54,7 @@
   * kops delete cluster --name masthan641.k8s.local --state=s3://masthan641.k8s.local --yes   // delete total cluster at a time.
 
 ==============================================================================[SERVICE]=============================================================================================
-   
+* kubectl    
 
 
 
