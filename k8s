@@ -1,5 +1,5 @@
 1.imprative way (manual):
-  * kubectl run pod1 --image nginx        // creating pod1
+  * kubectl run pod1 --image=nginx        // creating pod1
   * kubectl get po                        // list all pods
   * kubectl get pod -o wide               // info of pods
   * kubectl delete pod pod1               // delete pod1
