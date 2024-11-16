@@ -53,8 +53,14 @@
 
   * kops delete cluster --name masthan641.k8s.local --state=s3://masthan641.k8s.local --yes   // delete total cluster at a time.
 
-==============================================================================[SERVICE]=============================================================================================
+==============================================================================[]=============================================================================================
 * kubectl top po           // show metrics.
+* kubectl autoscale deployment movies-deploy --cpu-percent=20 --min=1 --max=10       // auto scaling
+* kubectl get po --watch           // do pod
+* kubectl exec -it --name copy-podname -- /bin/bish     // particular pod
+* apt install stress -y
+* stress
+* copy example and paste 60sec
 
 
 
