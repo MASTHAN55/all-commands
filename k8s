@@ -10,6 +10,7 @@
 ============================================================================= [REPLICASET] =============================================================================  
 3.peplikaset(rs):
   * kubectl get po --show-labels              // show labels of pod.
+  *
   * kubectl describe po -l tier=vali          // show only tier=vali labels of pod.
   * kubectl delete pod -l tier!=vali          // delete all pods.
   * kubectl delete po pod1                    // for delete pod.
@@ -19,12 +20,12 @@
 4.deployment (roling statagy).
   * kubectl get deploy                        // show all depolyment list.
   * kubectl get deploy -o deploy              // sho wall onfo of deploy.
-  * kubectl edit deploy/movies                // edit  
+  * kubectl edit deploy/movies                // edit movies deploy.
   * kubectl roolout history deploy/movies     // 
-  * kubectl rollout undo deploy/movies        // 
+  * kubectl rollout undo deploy/movies        // back to old (role back).
   * kubectl rollout status deploy/movies      // 
-  * kubectl rollout pause deploy/movies       // 
-  * kubectl rollout resume deploy.movies      // 
+  * kubectl rollout pause deploy/movies       // cont switch role back.
+  * kubectl rollout resume deploy movies      // give switching permissions.
 =============================================================================[NAME-SPACESES]====================================================================================================
 5.
   * kubectl create ns dev     // create dev name space.
