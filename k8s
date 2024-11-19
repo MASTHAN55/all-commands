@@ -61,7 +61,7 @@
 * kubectl exec -it --name copy-podname -- /bin/bish     // login to particular pod
 * apt install stress -y
 * stress
-* copy example and paste 60sec 
+* copy example and paste 60sec
 
 
 
