@@ -57,15 +57,61 @@
 ==============================================================================[]=============================================================================================
 * kubectl top po           // show metrics.
 * kubectl autoscale deployment movies-deploy --cpu-percent=20 --min=1 --max=10       // auto scaling
-* kubectl get po --watch           // do pod
+* kubectl get po --watch           // do terminal
 * kubectl exec -it --name copy-podname -- /bin/bish     // login to particular pod
 * apt install stress -y
 * stress
 * copy example and paste 60sec
 
 
+===================================================================================[r-back]===========================================================================
+ 1. Generate a key using OpenSSL: 
+    * openssl genrsa -out dev1.key 2048
 
+2. Generate a Client Sign Request (CSR) : 
+   * openssl req -new -key dev1.key -out dev1.csr -subj "/CN=dev1/O=group1"
+   * ls ~/.minikube/ 
 
+3. Generate the certificate (CRT): 
+   * openssl x509 -req -in dev1.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out dev1.crt -days 500
+                           ============================================================================================================
+** Create a user
+1. Set a user entry in kubeconfig
+   kubectl config set-credentials dev1 --client-certificate=dev1.crt --client-key=dev1.key
+
+2.Set a context entry in kubeconfig
+  kubectl config set-context dev1-context --cluster=minikube --user=dev1            //finally usr created without role permmisions.
+  kubectl config view
+
+3.Switching to the created user
+  kubectl config use-context dev1-context
+  $ kubectl config current-context # check the current context
+  dev1-context
+
+vim role.yml
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: dev
+  name: pod-reader
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: read-pods
+  namespace: dev
+subjects:
+- kind: User
+  name: dev1 # Name is case sensitive
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role #this must be Role or ClusterRole
+  name: pod-reader # must match the name of the Role
+  apiGroup: rbac.authorization.k8s.io
 
 
 
