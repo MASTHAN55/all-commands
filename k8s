@@ -89,6 +89,7 @@
   dev1-context
 
 ** Do minikube context.
+   kubectl create ns dev
 vim role.yml
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
