@@ -89,7 +89,9 @@
   dev1-context
                          ======================================================================================================
 ** Do minikube context.
-   kubectl create ns dev
+   kubectl config use-context minikube      //switch to minikube
+        //kubectl create ns dev
+       //kubectl config set-context --current --namespace=dev
 
 vim role.yml
 kind: Role
@@ -114,7 +116,8 @@ subjects:
 roleRef:
   kind: Role #this must be Role or ClusterRole
   name: pod-reader # must match the name of the Role
-  apiGroup: rbac.authorization.k8s.io
+  apiGroup: rbac.authorization.k8s.io 
+                    =================================================================================================
 
 
 
