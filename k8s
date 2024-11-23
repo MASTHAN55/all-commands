@@ -88,7 +88,7 @@
   $ kubectl config current-context # check the current context
   dev1-context
                          ======================================================================================================
-** Do minikube context.
+** Do minikube context. [ns,role,rolebind.. DO minikube  ]
    kubectl config use-context minikube      //switch to minikube
         //kubectl create ns dev
        //kubectl config set-context --current --namespace=dev
@@ -118,6 +118,10 @@ roleRef:
   name: pod-reader # must match the name of the Role
   apiGroup: rbac.authorization.k8s.io 
                     =================================================================================================
+ 1. switch dev-context
+ 2. switch dev-namespace
+ 3. switch dev-user
+  [check all once] 
 
 
 
