@@ -4,7 +4,7 @@ clear/ctrl l  : to clear the screen.
 date          : to show date and time.
 ip addr       : to show the ip address.
 ip addr show  : to show the ip address.
-ifconfig	    : to show the ip address.
+ifconfig      : to show the ip address.
 hostname -i   : to show the ip address.
 
 hostnamectl set-hostname raham           : to set hostname.
