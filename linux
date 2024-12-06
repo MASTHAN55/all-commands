@@ -128,6 +128,41 @@ userdel Vijay                : to delete Vijay user
 groupdel Vijay               : to delete Vijay group
 gpasswd -d kiran devops      : to delete devops group from  kiran user
 
+                          ---------------------------------------------------------------------------------------
+FILE TYPES:
+-	: regular file
+b	: blocked file
+c	: character file
+d	: directory
+l	: link file
+
+
+Permission:
+r	: read	: 4
+w	: write	: 2
+x	: executable : 1
+
+user & group & others
+rw-    r--     r--
+
+chmod 777 file1             : numerical method
+chmod u=rw,g=rwx,o=rx file1 : alphabetical method
+
+chown vijay:vijay file1     : to change ownership of a file
+
+
+
+NETWORK:
+
+ip addr       : to show the ip address
+ip addr show  : to show the ip address
+ifconfig      : to show the ip address
+hostname -i   : to show the ip address
+ping          : to check server response
+ps aux        : to show process information
+kill -9 pid   : to kill the process
+netstat       : to show active internet connections
+
 
 
 
