@@ -58,12 +58,28 @@ EDITORS: used to edit the files
 :wq  : save & quit
 :wq! : forceful save and quit
 
+
 INSERT MODE:
 i	: to insert the content
 I	: starting of line
 A	: Ending of line.
 O	: New line above existing line
 o	: New line below existing line
+
+
+COMMAND MODE:
+gg	: top of file
+shift g	: bottom of file
+5gg	: takes to 5th line
+:5	: takes to 5th line
+yy	: copies single line
+3yy	: copies 3 lines
+p	: paste single time
+3p	: paste 3 times
+dd	: deletes single line
+3dd	: deletes 3 lines
+u   : undo
+/word	: to find for a word
 
 
 
