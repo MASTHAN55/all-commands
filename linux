@@ -87,8 +87,8 @@ to search for a word
 
 grep word file      : to search for a word
 grep word file -i   : i -- > to avoid case sensitive
-grep word file -ic	: c -- > to show count
-grep word file -iv	: v -- > to avoid the lines with that word 
+grep word file -ic  : c -- > to show count
+grep word file -iv  : v -- > to avoid the lines with that word 
 
 grep 'word1\|word2\|word3' file  : to search for multiple word
 cat -n file | grep word          : to print words with line numbers
