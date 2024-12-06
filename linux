@@ -150,10 +150,8 @@ chmod u=rw,g=rwx,o=rx file1 : alphabetical method
 
 chown vijay:vijay file1     : to change ownership of a file
 
-
-
+                 ----------------------------------------------------------------------------------------------------
 NETWORK:
-
 ip addr       : to show the ip address
 ip addr show  : to show the ip address
 ifconfig      : to show the ip address
