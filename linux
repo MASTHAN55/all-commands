@@ -58,6 +58,12 @@ EDITORS: used to edit the files
 :wq  : save & quit
 :wq! : forceful save and quit
 
+INSERT MODE:
+i	: to insert the content
+I	: starting of line
+A	: Ending of line.
+O	: New line above existing line
+o	: New line below existing line
 
 
 
