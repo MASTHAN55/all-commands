@@ -1,3 +1,4 @@
+COMMANDS:
 sudo -i       : to switch to root user.
 who/w         : to check users login info.
 clear/ctrl l  : to clear the screen.
@@ -9,3 +10,63 @@ hostname -i   : to show the ip address.
 
 hostnamectl set-hostname raham           : to set hostname.
 timedatectl set-timezone Asia/Kolkata    : to set IST.
+
+                          -----------------------------------------------------------------------------------------------------------
+FILE COMMANDS: 
+touch file1     : to create a file.
+ls/ll           : to list the files.
+cat file1       : to show the content.
+more file1      : to show the content.
+cat>>file1      : to insert the content.
+enter ctlr d    : to save the content.
+
+cp file1 file2  : to copy content from file1 to file2.
+mv file1 raham  : to rename file1 as raham.
+rm file1        : to remove file1.
+rm file2 -f     : to remove file2 forcefully.
+rm * -f         : to remove all files in that folder.
+touch file{1..100} : to create file1 to file100.
+
+head file1      : to print top 10 lines of a file.
+head -5 file1   : to print top 5 lines of a file.
+head -12 file1  : to print top 12 lines of a file.
+tail file1      : to print bottom 10 lines of a file.
+tail -5 file1   : to print bottom 5 lines of a file.
+tail -12 file1  : to print bottom 12 lines of a file.
+
+sed -n '7,14p' file1    : to print from line 7 to 14.
+wc file1                : to print lines, words and characters.
+cat -n file1            : to print line numbers along with file.
+
+                         -------------------------------------------------------------------------------------------------------------------
+HAEDWARE COMMANDS:
+cat /proc/cpuinfo    : to show cpu information.
+lscpu                : to show cpu information.
+cat /proc/meminfo    : to show memory information.
+lsmem                : to show memory information.
+lsblk                : to show rom infromation.
+
+fdisk -l             : to show rom information.
+free                 : to show available ram information.
+df -h                : to show mount paths.
+du -sh               : to show disk useage of folder.
+
+                       -------------------------------------------------------------------------------------------------------------------------
+EDITORS: used to edit the files
+:w   : save
+:q   : quit
+:wq  : save & quit
+:wq! : forceful save and quit
+
+
+
+
+
+
+
+
+
+
+
+
+
