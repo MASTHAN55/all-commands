@@ -96,6 +96,22 @@ grep word file1 -n               : to print words with line numbers
 grep word file1 file2            : to search single word in multiple files
 grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
 
+                          ----------------------------------------------------------------------------------------------------------
+
+
+SED: STREAM EDITOR
+to find and replace words
+
+s: search
+g: global
+i: insert
+
+sed -i 's/word1/word2/g' file1 : to replace word1 with word2
+sed -i 's/word1/word2/g; s/word3/word4/g' file1 : to replace multiple words
+sed -i '1c welcome to ccit' file1	: to replace a line
+sed -i '3d'  			: deletes 3rd line
+sed -i '10a hello' file1	: to add hello to 10th line
+
 
 
 
