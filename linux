@@ -111,6 +111,24 @@ sed -i '1c welcome to ccit' file1               : to replace a line
 sed -i '3d'                                     : deletes 3rd line
 sed -i '10a hello' file1                        : to add hello to 10th line
 
+                   --------------------------------------------------------------------------------------------------
+
+useradd raham   : to create user
+passwd raham    : to set password
+cat /etc/passwd : to show list of users
+cat /etc/group	: to show list of groups
+cat /etc/shadow	: to show password information
+vim /etc/sudoers: to add user to sudo file
+su - raham      : to login to raham user
+id Vijay        : to show Vijay user details
+groupadd devops	: to create group called devops
+
+usermod -a -G devops Vijay   : to add vijay user to devops group
+useradd ram -e 2024-06-30    : user creation with exipry date.
+userdel Vijay                : to delete Vijay user
+groupdel Vijay               : to delete Vijay group
+gpasswd -d kiran devops      : to delete devops group from  kiran user
+
 
 
 
