@@ -1,3 +1,5 @@
+                                                                  [Routine life]
+
 terrform init       // download pluggins in (.terraform )... (.terraform.lock.hcl).
 terrform plan       // creating an execution plan.
 terrfom apply       // to create resource (created_EC2).
