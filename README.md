@@ -22,7 +22,7 @@ This repository contains curated and categorized command-line references for the
 
 ## 📜 Table of Contents
 
-- [Docker Commands](#docker-commands)
+- [Docker Commands](https://github.com/MASTHAN55/all-commands/blob/main/docker)
 - [Terraform Commands](#terraform-commands)
 - [Linux Commands](#linux-commands)
 - [Jenkins Commands](#jenkins-commands)
