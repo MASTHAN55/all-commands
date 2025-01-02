@@ -26,7 +26,7 @@ This repository contains curated and categorized command-line references for the
 - [Terraform Commands](#terraform-commands)
 - [Linux Commands](#linux-commands)
 - [Jenkins Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
-- [Ansible Commands](#ansible-commands)
+- [Ansible Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
 - [Kubernetes Commands](#kubernetes-commands)
 - [Contributing](#contributing)
 - [License](#license)
