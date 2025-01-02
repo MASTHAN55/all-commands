@@ -24,7 +24,7 @@ This repository contains curated and categorized command-line references for the
 
 - [Docker Commands](https://github.com/MASTHAN55/all-commands/blob/main/docker)
 - [Terraform Commands](https://github.com/MASTHAN55/all-commands/blob/main/terraform)
-- [Linux Commands](#linux-commands)
+- [Linux Commands](https://github.com/MASTHAN55/all-commands/blob/main/linux)
 - [Jenkins Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
 - [Ansible Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
 - [Kubernetes Commands](https://github.com/MASTHAN55/all-commands/blob/main/k8s)
