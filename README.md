@@ -23,7 +23,7 @@ This repository contains curated and categorized command-line references for the
 ## 📜 Table of Contents
 
 - [Docker Commands](https://github.com/MASTHAN55/all-commands/blob/main/docker)
-- [Terraform Commands](#terraform-commands)
+- [Terraform Commands](https://github.com/MASTHAN55/all-commands/blob/main/terraform)
 - [Linux Commands](#linux-commands)
 - [Jenkins Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
 - [Ansible Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
