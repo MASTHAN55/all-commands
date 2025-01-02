@@ -27,7 +27,7 @@ This repository contains curated and categorized command-line references for the
 - [Linux Commands](#linux-commands)
 - [Jenkins Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
 - [Ansible Commands](https://github.com/MASTHAN55/all-commands/blob/main/ansible)
-- [Kubernetes Commands](#kubernetes-commands)
+- [Kubernetes Commands](https://github.com/MASTHAN55/all-commands/blob/main/k8s)
 - [Contributing](#contributing)
 - [License](#license)
 
