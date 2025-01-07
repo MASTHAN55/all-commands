@@ -1,35 +1,35 @@
                                                                   [Routine life]
 
-terrform init       // download pluggins in (.terraform )... (.terraform.lock.hcl).
-terrform plan       // creating an execution plan.
-terrfom apply       // to create resource (created_EC2).
-terraform destroy   // destroy the server.
-terraform fmt       // create structor.
+terrform init        : download pluggins in (.terraform )... (.terraform.lock.hcl).
+terrform plan        : creating an execution plan.
+terrfom apply        : to create resource (created_EC2).
+terraform destroy    : destroy the server.
+terraform fmt        : create structor.
 
-terraform destroy -target="aws_instance.one[3]" --auto-approve                                  // destroy singe target resource.
-terraform destroy -target="aws_instance.one[5]" -target="aws_instance.two[2]"--auto-approve     // destroy multi target resources.
+terraform destroy -target="aws_instance.one[3]" --auto-approve                                  : destroy singe target resource.
+terraform destroy -target="aws_instance.one[5]" -target="aws_instance.two[2]"--auto-approve     : destroy multi target resources.
 
 
-terraform plan -var-file="dev.tfvars"                             // plan selected 
-terraform apply -var-file="dev.tfvars" -auto-approve              // creating resources for dev-server.
-terraform destroy -var-file="dev.tfvars" -auto-approve            // destroy the dev-server
-terraform apply -replace="aws_instance.one[0]" --auto-approve     // recreate selected one.
-terraform taint aws_vpc.one[0]                                    // recreate selected resource. 
+terraform plan -var-file="dev.tfvars"                              : plan selected 
+terraform apply -var-file="dev.tfvars" -auto-approve               : creating resources for dev-server.
+terraform destroy -var-file="dev.tfvars" -auto-approve             : destroy the dev-server
+terraform apply -replace="aws_instance.one[0]" --auto-approve      : recreate selected one.
+terraform taint aws_vpc.one[0]                                     : recreate selected resource. 
 
-terraform state list               // list the resources.
-terraform workspace select dev     // switch to dev workspace.
-terraform workspace list           // to list workspace.
-terraform workspace new dev        // creating new workspace.
-terraform workspace show           // show current workspace.
-terraform workspace delete dev     // delete dev workspace.
+terraform state list                : list the resources.
+terraform workspace select dev      : switch to dev workspace.
+terraform workspace list            : to list workspace.
+terraform workspace new dev         : creating new workspace.
+terraform workspace show            : show current workspace.
+terraform workspace delete dev      : delete dev workspace.
 
-terraform state show aws_vpc.two                         // show selected info.
-terraform state mv aws_subnet.two aws_subnet.three       // to move state info from one to another.
-terraform state rm aws_subnet.three                      // to remove state info of a resource.
-terraform state pull                                     // just print info form s3-bucket.
-terraform init -migrate-state -auto-approve              // store info to s3 bucket...   [got to official web "backend code:s3" for code].
-terraform init -upgrate                                  // upgrate new version. 
+terraform state show aws_vpc.two                         : show selected info.
+terraform state mv aws_subnet.two aws_subnet.three       : to move state info from one to another.
+terraform state rm aws_subnet.three                      : to remove state info of a resource.
+terraform state pull                                     : just print info form s3-bucket.
+terraform init -migrate-state -auto-approve              : store info to s3 bucket...   [got to official web "backend code:s3" for code].
+terraform init -upgrate                                  : upgrate new version. 
 
-terraform providers                                      // show all providers. 
-terraform refresh                                        // refresh the state file.
-terraform plan -generate-config-out=ec2.tf               // transfor info server to terraform, generated__ by Terraform (cat ec2.tf).
+terraform providers                                      : show all providers. 
+terraform refresh                                        : refresh the state file.
+terraform plan -generate-config-out=ec2.tf               : transfor info server to terraform, generated__ by Terraform (cat ec2.tf).
