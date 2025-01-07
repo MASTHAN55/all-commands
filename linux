@@ -84,7 +84,7 @@ u       : undo
 /word   : to find for a word
 
                            ------------------------------------------ [GREP] -------------------------------------------------------------
-GREP: Global Regular Expression Print(to search for a word)
+GREP: Global Regular Expression Print(to search for a word).
 to search for a word
                                                                                    
 grep word file      : to search for a word
@@ -99,14 +99,18 @@ grep word file1 file2            : to search single word in multiple files
 grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
 
                           ------------------------------------------------ [SED] ----------------------------------------------------------
-SED: STREAM EDITOR()
+SED: STREAM EDITOR(to find and replace the word).
 to find and replace words
 
 s: search
 g: global
 i: insert
+d: delete
+a: add
+1c: change 1st line
 
 sed -i 's/word1/word2/g' file1                  : to replace word1 with word2
+sed -i '4s/word1/word2/g' file1                 : to replace word1 with word2 4th lline
 sed -i 's/word1/word2/g; s/word3/word4/g' file1 : to replace multiple words
 sed -i '1c welcome to ccit' file1               : to replace a line
 sed -i '3d'                                     : deletes 3rd line
