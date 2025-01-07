@@ -131,6 +131,7 @@ groupadd devops	 : to create group called devops
 usermod -a -G devops Vijay   : to add vijay user to devops group
 useradd ram -e 2024-06-30    : user creation with exipry date.
 userdel Vijay                : to delete Vijay user
+groupadd masthan             : to create group
 groupdel Vijay               : to delete Vijay group
 gpasswd -d kiran devops      : to delete devops group from  kiran user
 
