@@ -20,11 +20,11 @@ more file1      : to show the content.
 cat>>file1      : to insert the content.
 enter ctlr d    : to save the content.
 
-cp file1 file2  : to copy content from file1 to file2.        [Don't need to create file2 manual, file2 automatically created after copy]
-mv file1 raham  : to rename file1 as raham.
-rm file1        : to remove file1.
-rm file2 -f     : to remove file2 forcefully.
-rm * -f         : to remove all files in that folder.
+cp file1 file2     : to copy content from file1 to file2.        [Don't need to create file2 manual, file2 automatically created after copy]
+mv file1 masthan   : to rename file1 as masthan.
+rm file1           : to remove file1.
+rm file2 -f        : to remove file2 forcefully.
+rm * -f            : to remove all files in that folder.
 touch file{1..100} : to create file1 to file100.
 
 head file1      : to print top 10 lines of a file.
