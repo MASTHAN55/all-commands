@@ -97,7 +97,6 @@ grep word file -ic  : c -- > to show count
 grep word file -iv  : v -- > to avoid the lines with that word 
 
 grep 'word1\|word2\|word3' file  : to search for multiple word
-cat -n file | grep word          : to print words with line numbers
 grep word file1 -n               : to print words with line numbers
 grep word file1 file2            : to search single word in multiple files
 grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
