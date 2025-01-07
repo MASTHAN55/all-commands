@@ -102,7 +102,7 @@ grep word file1 -n               : to print words with line numbers
 grep word file1 file2            : to search single word in multiple files
 grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
 
-                          ------------------------------------------------ [SED] ----------------------------------------------------------
+                          ------------------------------------------------ [SED -i] ----------------------------------------------------------
 SED: STREAM EDITOR(to find and replace the word).
 to find and replace words
 
