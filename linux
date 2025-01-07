@@ -8,7 +8,7 @@ ip addr show  : to show the ip address.
 ifconfig      : to show the ip address.
 hostname -i   : to show the ip address.
 
-hostnamectl set-hostname raham           : to set hostname.
+hostnamectl set-hostname masthan         : to set hostname.
 timedatectl set-timezone Asia/Kolkata    : to set IST.
 
                           -------------------------------------- [FILE COMMANDS] ---------------------------------------------------------------------
