@@ -67,22 +67,22 @@ docker system df -v                   : all info (cont,images,volumes,build cach
 
 =================================================== (DOCKER-COMPOSE) ====================================================================
 
-docker-compose up -d                 : to create and start all containers.
-docker-compose stop                  : stop all containers.
-docker-compose start                 : start all containers.
-docker-compose kill                  : kill all containers.
-docker-compose rm                    : to delete all containers.
+docker-compose up -d            : to create and start all containers.
+docker-compose stop             : stop all containers.
+docker-compose start            : start all containers.
+docker-compose kill             : kill all containers.
+docker-compose rm               : to delete all containers.
 
-docker-compose down                  : stop and delete all containers.
-docker-compose pause                 : pasuse all containers.
-docker-compose unpause               : unpause all containers.
-docker-compose ps -a                 : to list the containers managed by compose file.
-docker-compose images                : to list the images managed by compose file.
+docker-compose down             : stop and delete all containers.
+docker-compose pause            : pasuse all containers.
+docker-compose unpause          : unpause all containers.
+docker-compose ps -a            : to list the containers managed by compose file.
+docker-compose images           : to list the images managed by compose file.
 
-docker-compose logs                  : to show logs of docker compose.
-docker-compose top                   : to show the process of compose containers.
-docker-compose restart               : to restart all the compose containers.
-docker-compose scale train=10        : to scale the service.
+docker-compose logs             : to show logs of docker compose.
+docker-compose top              : to show the process of compose containers.
+docker-compose restart          : to restart all the compose containers.
+docker-compose scale train=10   : to scale the service.
 
 ===================================================== (DOCKER_HUB) =================================================
 
