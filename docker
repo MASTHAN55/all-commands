@@ -1,88 +1,88 @@
-yum install docker -y                 // installing docker.
-systemctl start docker                // start docker. 
-systemctl status docker               // check the status.
-docker images                         // show all images.
-docker ps -a                          // show all containers list.
-docker ps                             // show running containers list.
-docker rename  cont1 cont2            // rename cont1 to cont2.
+yum install docker -y                 : installing docker.
+systemctl start docker                : start docker. 
+systemctl status docker               : check the status.
+docker images                         : show all images.
+docker ps -a                          : show all containers list.
+docker ps                             : show running containers list.
+docker rename  cont1 cont2            : rename cont1 to cont2.
 
-FROM          // used to base image.
-RUN           // used to run run linux commands(During image creation).
-CMD           // used to run run linux commands(After image creation).
-ENTRYPOINT    // high priority than cmd.
-COPY          // to copy local files to conatiner.
-ADD           // to copy internet files to conatiner.
-WORKDIR       // to open req directory.
-LABEL         // to add labels for docker images.
-ENV           // to set env variables (inside container).
-ARGS          // to pass env variables (outside containers).
-EXPOSE        // to give port number.
+FROM          : used to base image.
+RUN           : used to run run linux commands(During image creation).
+CMD           : used to run run linux commands(After image creation).
+ENTRYPOINT    : high priority than cmd.
+COPY          : to copy local files to conatiner.
+ADD           : to copy internet files to conatiner.
+WORKDIR       : to open req directory.
+LABEL         : to add labels for docker images.
+ENV           : to set env variables (inside container).
+ARGS          : to pass env variables (outside containers).
+EXPOSE        : to give port number.
 
-docker pull ubuntu                         // installing image.
-docker run -it --name cont1 ubuntu         // creating a container(cont1) from ubuntu server.
-docker run -it --name cont2 cont1:v1       // creating cont2 with cont1:v1 image.
-docker start cont1                         // use for starting cont1.
-docker stop cont1                          // use for stoping cont1.
-docker kill cont1                          // for immediate stoping.
-docker rmi -f masthan:v1                   // remove image perminently.
+docker pull ubuntu                         : installing image.
+docker run -it --name cont1 ubuntu         : creating a container(cont1) from ubuntu server.
+docker run -it --name cont2 cont1:v1       : creating cont2 with cont1:v1 image.
+docker start cont1                         : use for starting cont1.
+docker stop cont1                          : use for stoping cont1.
+docker kill cont1                          : for immediate stoping.
+docker rmi -f masthan:v1                   : remove image perminently.
 
-docker inspect cont1                       // show all onfo of cont1.
-docker attach cont2                        // switch to cont2.
-ctrl+d                                     // exit but container stoped.
-ctrl+pq                                    // exit but container running.
-docker rm cont1                            // remove the container.
+docker inspect cont1                       : show all onfo of cont1.
+docker attach cont2                        : switch to cont2.
+ctrl+d                                     : exit but container stoped.
+ctrl+pq                                    : exit but container running.
+docker rm cont1                            : remove the container.
   
-docker pause cont1                         // pause cont1.
-docker unpause cont1                       // unpause cont1.
-docker commit cont1 masthan:v1             // backup info cont1 to masthan:v1.
+docker pause cont1                         : pause cont1.
+docker unpause cont1                       : unpause cont1.
+docker commit cont1 masthan:v1             : backup info cont1 to masthan:v1.
 
-docker rmi -f $(docker images -qa)         // remove all images at a time
-docker kill $(docker ps -qa)               // kill containers at a time.
-docker rm $(docker ps -qa)                 // remove all containers at a time.
-docker stop $(docker ps -qa)               // stop all containers at a time.
-docker build -t masthan:v1 .               // execute dockerfile with masthan:v1 container.
+docker rmi -f $(docker images -qa)         : remove all images at a time
+docker kill $(docker ps -qa)               : kill containers at a time.
+docker rm $(docker ps -qa)                 : remove all containers at a time.
+docker stop $(docker ps -qa)               : stop all containers at a time.
+docker build -t masthan:v1 .               : execute dockerfile with masthan:v1 container.
   
-docker run -it --name cont9 --cpus="0.1" --memory="100mb" "masthan:v1"                       // restrict the memory and ram.
-docker update --cpus="0.2" --memory="200" "masthan:v1"                                       // update cpus and memory size.
-docker run -it --name cont1 --volumes-from cont2 ubuntu                                      // copy volumes one-volume to another volume.
+docker run -it --name cont9 --cpus="0.1" --memory="100mb" "masthan:v1"                       : restrict the memory and ram.
+docker update --cpus="0.2" --memory="200" "masthan:v1"                                       : update cpus and memory size.
+docker run -it --name cont1 --volumes-from cont2 ubuntu                                      : copy volumes one-volume to another volume.
 
-docker volume ls                              // show all volumes.
-docker volume create volume3                  // create volume with volume3 name.
-docker volume inspect volume3                 // all info of volume3 (mount-path of volume3).
-docker volume rm volume3                      // remove volume.
+docker volume ls                              : show all volumes.
+docker volume create volume3                  : create volume with volume3 name.
+docker volume inspect volume3                 : all info of volume3 (mount-path of volume3).
+docker volume rm volume3                      : remove volume.
 
-docker run -it --name cont3 -v volume2 ubuntu                                             // create cont3 and volume (CLI - method).
-docker run -it --name cont4 --volumes-from cont3 ubuntu                                   // copy volumes cont4 to cont3 (CLI -method). 
-docker run -it --name cont5 --mount cont7 source=volume3,destination=/abc ubuntu          // copy volumes from cont7 to cont5. (do mount path of volume3)
+docker run -it --name cont3 -v volume2 ubuntu                                             : create cont3 and volume (CLI - method).
+docker run -it --name cont4 --volumes-from cont3 ubuntu                                   : copy volumes cont4 to cont3 (CLI -method). 
+docker run -it --name cont5 --mount cont7 source=volume3,destination=/abc ubuntu          : copy volumes from cont7 to cont5. (do mount path of volume3)
 
-cp * (copy mount path of volume)  {do root user}                                          // copy files from local to volume.
-cp * /root/      {do mount path user}                                                     // copy files from volume to local.
-docker run -it --name cont6 -v /root/:/xyz ubuntu                                         // copy root files from local to cont6 at a time.
-docker run -it --name jenkins -p 8080:8080 jenkins/jenkins:lts                            // installing jenkins.
-docker exec -it cont1 /bin/bash  (use after start container)                              // login to container.
+cp * (copy mount path of volume)  {do root user}                                          : copy files from local to volume.
+cp * /root/      {do mount path user}                                                     : copy files from volume to local.
+docker run -it --name cont6 -v /root/:/xyz ubuntu                                         : copy root files from local to cont6 at a time.
+docker run -it --name jenkins -p 8080:8080 jenkins/jenkins:lts                            : installing jenkins.
+docker exec -it cont1 /bin/bash  (use after start container)                              : login to container.
 
                ------------------------------------------------------------------------------------------------------------------------------------
-docker system df                      // all info of (cont,images,volumes,build cache).
-docker system df -v                   // all info (cont,images,volumes,build cache).
+docker system df                      : all info of (cont,images,volumes,build cache).
+docker system df -v                   : all info (cont,images,volumes,build cache).
 
 =================================================== (DOCKER-COMPOSE) ====================================================================
 
-docker-compose up -d                 // to create and start all containers.
-docker-compose stop                  // stop all containers.
-docker-compose start                 // start all containers.
-docker-compose kill                  // kill all containers.
-docker-compose rm                    // to delete all containers.
+docker-compose up -d                 : to create and start all containers.
+docker-compose stop                  : stop all containers.
+docker-compose start                 : start all containers.
+docker-compose kill                  : kill all containers.
+docker-compose rm                    : to delete all containers.
 
-docker-compose down                  // stop and delete all containers.
-docker-compose pause                 // pasuse all containers.
-docker-compose unpause               // unpause all containers.
-docker-compose ps -a                 // to list the containers managed by compose file.
-docker-compose images                // to list the images managed by compose file.
+docker-compose down                  : stop and delete all containers.
+docker-compose pause                 : pasuse all containers.
+docker-compose unpause               : unpause all containers.
+docker-compose ps -a                 : to list the containers managed by compose file.
+docker-compose images                : to list the images managed by compose file.
 
-docker-compose logs                  // to show logs of docker compose.
-docker-compose top                   // to show the process of compose containers.
-docker-compose restart               // to restart all the compose containers.
-docker-compose scale train=10        // to scale the service.
+docker-compose logs                  : to show logs of docker compose.
+docker-compose top                   : to show the process of compose containers.
+docker-compose restart               : to restart all the compose containers.
+docker-compose scale train=10        : to scale the service.
 
 ===================================================== (DOCKER_HUB) =================================================
 
@@ -94,28 +94,28 @@ docker push masthan733/movies
 
 
 ## COMPRESSING IMAGES:
-du -sh                                                         // show filesize.
-docker save masthan733/facebook:v1 -o abc.tar                  // convert to tar file
-gzip abc.tar abc.tar.gz                                        // convert to tar to gz file. 
+du -sh                                                         : show filesize.
+docker save masthan733/facebook:v1 -o abc.tar                  : convert to tar file
+gzip abc.tar abc.tar.gz                                        : convert to tar to gz file. 
 
 =========================================================== SWARM =================================================================
 
-docker swarm init (manager)                                    // install swarm plugins. 
+docker swarm init (manager)                                    : install swarm plugins. 
 -- > copy-paste the token to worker nodes
-docker node ls                                                 // show all connected nodes.
-docker swarm leave -f                                          // 
+docker node ls                                                 : show all connected nodes.
+docker swarm leave -f                                          : 
 
 docker service create --name movies --replicas 3 -p 81:80 masthan733/movies:latest              //  
-docker service ls                                    // show all servers.
-docker service ps movies                             // list the containers of movies.
-dokcer service inspect movies                        // complete info of movies service.
-docker service scale movies=10	                     // to scale in the containers (increase service).
-docker service scale movies=3	                     // to scale out the containers (decrease service).
+docker service ls                                    : show all servers.
+docker service ps movies                             : list the containers of movies.
+dokcer service inspect movies                        : complete info of movies service.
+docker service scale movies=10	                     : to scale in the containers (increase service).
+docker service scale movies=3	                       : to scale out the containers (decrease service).
 
-docker service scale movies=3	: to scale out the containers
+docker service scale movies=3	  : to scale out the containers
 docker service rollback movies	: to go previous state
-docker service logs movies	: to see the logs
-docker service rm movies	: to delete the services.
+docker service logs movies	    : to see the logs
+docker service rm movies	      : to delete the services.
 
 ============================================================= NETWORK ======================================================
 docker netework ls            // show all networks.
@@ -125,11 +125,11 @@ docker run -itd  --name cont1 -p 81:80 masthan733/movies:v1
 docker inspect cont1 
 
 docker network connect cont masthan 
-docker exec -it cont1 /bin/bash                    // login cont1 server.
-apt install iputils-ping -y                        // install ping package.
-ping [ip-adderss of server]                        // connecting to server.
-docker network disconnect cont masthan             // disconnect to server.
-docker network rm masthan                          // remove network.
+docker exec -it cont1 /bin/bash                    : login cont1 server.
+apt install iputils-ping -y                        : install ping package.
+ping [ip-adderss of server]                        : connecting to server.
+docker network disconnect cont masthan             : disconnect to server.
+docker network rm masthan                          : remove network.
 
 
 
