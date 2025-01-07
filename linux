@@ -42,6 +42,7 @@ cat -n file1            : to print line numbers along with file.
                          -------------------------------------------------- [HAEDWARE COMMANDS] ----------------------------------------------------------------
 HAEDWARE COMMANDS:
 cat /proc/cpuinfo    : to show cpu information.
+                   [or]
 lscpu                : to show cpu information.
 cat /proc/meminfo    : to show memory information.
 lsmem                : to show memory information.
@@ -113,15 +114,15 @@ sed -i '10a hello' file1                        : to add hello to 10th line
 
                    ------------------------------------------------ [CREATE USER] --------------------------------------------------
 CREATE USER:
-useradd raham   : to create user
-passwd raham    : to set password
-cat /etc/passwd : to show list of users
-cat /etc/group	: to show list of groups
-cat /etc/shadow	: to show password information
-vim /etc/sudoers: to add user to sudo file
-su - raham      : to login to raham user
-id Vijay        : to show Vijay user details
-groupadd devops	: to create group called devops
+useradd raham    : to create user
+passwd raham     : to set password
+cat /etc/passwd  : to show list of users
+cat /etc/group	 : to show list of groups
+cat /etc/shadow	 : to show password information
+vim /etc/sudoers : to add user to sudo file
+su - raham       : to login to raham user
+id Vijay         : to show Vijay user details
+groupadd devops	 : to create group called devops
 
 usermod -a -G devops Vijay   : to add vijay user to devops group
 useradd ram -e 2024-06-30    : user creation with exipry date.
