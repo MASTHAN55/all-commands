@@ -118,7 +118,7 @@ sed -i '10a hello' file1                        : to add hello to 10th line
 
                    ------------------------------------------------ [CREATE USER] --------------------------------------------------
 CREATE USER:
-useradd raham    : to create user
+useradd raham    : to create user  [whenever we create user "group & folder" automatocally created]
 passwd raham     : to set password
 cat /etc/passwd  : to show list of users
 cat /etc/group	 : to show list of groups
