@@ -42,12 +42,14 @@ cat -n file1            : to print line numbers along with file.
                          -------------------------------------------------- [HAEDWARE COMMANDS] ----------------------------------------------------------------
 HAEDWARE COMMANDS:
 cat /proc/cpuinfo    : to show cpu information.
-                   [or]
+                [or]
 lscpu                : to show cpu information.
-cat /proc/meminfo    : to show memory information.
-lsmem                : to show memory information.
-lsblk                : to show rom infromation.
 
+cat /proc/meminfo    : to show memory information.
+                [or]
+lsmem                : to show memory information.
+
+lsblk                : to show rom infromation.
 fdisk -l             : to show rom information.
 free                 : to show available ram information.
 df -h                : to show mount paths.
