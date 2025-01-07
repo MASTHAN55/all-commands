@@ -110,12 +110,12 @@ docker service ls                                    : show all servers.
 docker service ps movies                             : list the containers of movies.
 dokcer service inspect movies                        : complete info of movies service.
 docker service scale movies=10	                     : to scale in the containers (increase service).
-docker service scale movies=3	                       : to scale out the containers (decrease service).
+docker service scale movies=3	                      : to scale out the containers (decrease service).
 
-docker service scale movies=3	  : to scale out the containers
-docker service rollback movies	: to go previous state
-docker service logs movies	    : to see the logs
-docker service rm movies	      : to delete the services.
+docker service scale movies=3   : to scale out the containers.
+docker service rollback movies  : to go previous state.
+docker service logs movies      : to see the logs.
+docker service rm movies        : to delete the services.
 
 ============================================================= NETWORK ======================================================
 docker netework ls            // show all networks.
@@ -130,7 +130,6 @@ apt install iputils-ping -y                        : install ping package.
 ping [ip-adderss of server]                        : connecting to server.
 docker network disconnect cont masthan             : disconnect to server.
 docker network rm masthan                          : remove network.
-
 
 
 
