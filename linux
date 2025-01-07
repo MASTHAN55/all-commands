@@ -90,7 +90,7 @@ u       : undo
                            ------------------------------------------ [GREP] -------------------------------------------------------------
 GREP: Global Regular Expression Print(to search for a word).
 to search for a word
-                                                                                   
+                                                                       word = type what you search.            
 grep word file      : to search for a word
 grep word file -i   : i -- > to avoid case sensitive
 grep word file -ic  : c -- > to show count
