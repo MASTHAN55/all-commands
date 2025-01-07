@@ -18,7 +18,7 @@ ls/ll           : to list the files.
 cat file1       : to show the content.
 more file1      : to show the content.
 cat>>file1      : to insert the content.
-enter ctlr + d    : to save the content.
+enter ctlr + d  : to save the content.
 
 cp file1 file2     : to copy content from file1 to file2.        [Don't need to create file2 manual, file2 automatically created after copy]
 mv file1 masthan   : to rename file1 as masthan.
