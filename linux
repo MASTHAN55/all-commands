@@ -84,9 +84,9 @@ u       : undo
 /word   : to find for a word
 
                            ------------------------------------------ [GREP] -------------------------------------------------------------
-GREP: Global Regular Expression Print
+GREP: Global Regular Expression Print(to search for a word)
 to search for a word
-
+                                                                                   
 grep word file      : to search for a word
 grep word file -i   : i -- > to avoid case sensitive
 grep word file -ic  : c -- > to show count
@@ -99,7 +99,7 @@ grep word file1 file2            : to search single word in multiple files
 grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
 
                           ------------------------------------------------ [SED] ----------------------------------------------------------
-SED: STREAM EDITOR
+SED: STREAM EDITOR()
 to find and replace words
 
 s: search
