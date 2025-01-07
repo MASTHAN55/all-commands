@@ -50,7 +50,9 @@ cat /proc/meminfo    : to show memory information.
 lsmem                : to show memory information.
 
 lsblk                : to show rom infromation.
+                [or]
 fdisk -l             : to show rom information.
+
 free                 : to show available ram information.
 df -h                : to show mount paths.
 du -sh               : to show disk useage of folder.
