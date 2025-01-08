@@ -16,9 +16,15 @@ git config user.email "masthan@vali" :
 
            ------------------------------------------------- [GIT-HUB] --------------------------------------------------------       
 
-git branch           : to list the branch
-git branch masthan   : to create branch
-git checkout masthan : to switch masthan branch
+git branch            : to list the branch
+git branch masthan    : to create branch
+git checkout masthan  : to switch masthan branch
+                    (or)
+git checkout -b paytm  : create paytm branch & switch at a time
+
+git push origin master : code pushing to master in github
+git clone              : source code copy from github to local
+
 
 
 
