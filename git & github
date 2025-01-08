@@ -1,3 +1,4 @@
+                                                          [GIT]
 git init       : Initialize a New Repository
 git status     : to check status of file
 git add file1  : to track the file
