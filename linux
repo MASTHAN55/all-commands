@@ -173,7 +173,7 @@ netstat       : to show active internet connections
 
                             -------------------------------------------[SSH]--------------------------------------------------
 
-##SSH:
+SSH:
 ssh user@host – connect to host as user
 ssh -p port user@host – connect to host on port port as user
 ssh-copy-id user@host – add your key to host for user to enable a keyed or passwordless login
