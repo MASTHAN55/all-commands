@@ -15,6 +15,7 @@ timedatectl set-timezone Asia/Kolkata    : to set IST.
 FILE COMMANDS: 
 touch file1     : to create a file.
 ls/ll           : to list the files.
+ll -a           : to show hidden files.
 cat file1       : to show the content.
 more file1      : to show the content.
 cat>>file1      : to insert the content.
