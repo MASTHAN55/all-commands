@@ -1,1 +1,5 @@
-
+git init       :
+git status     :
+git add file1  :
+git log        :
+git commit -m "msg" file1  
