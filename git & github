@@ -27,7 +27,20 @@ git clone "copy repo link" : source code copy from github to local
 git merge movies           : copy files from movies
                      (or)
 git rebase movies          : copy files from movies
+git revert movies          : un-merge movies file (delete)
+git branch -m master main  : rename the branch master to main
+git branch -D master       : to delete branch
 
+------------------------------------------------
+touch file1    : to create a file
+git status     : to show status of a file
+git add file1  : to track the file
+git commit -m "msg" file1 : to commit the file
+
+git log                : to show commit information
+git log --oneline      : to show commits on single line
+git log --oneline -2   : to show last 2 commits in single line 
+git rm --cached file   : to untrack the tracked files
 
 
 
