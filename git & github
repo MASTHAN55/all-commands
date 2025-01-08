@@ -17,12 +17,12 @@ git config user.email "masthan@vali" :
            ------------------------------------------------- [GIT-HUB] --------------------------------------------------------       
 
 git branch            : to list the branch
-git branch masthan    : to create branch
+git branch masthan    : to create new branch
 git checkout masthan  : to switch masthan branch
                     (or)
 git checkout -b paytm  : create paytm branch & switch at a time
 
-git push origin master     : code pushing to master in github
+git push origin master     : code pushing to master github
 git clone "copy repo link" : source code copy from github to local
 git merge movies           : copy files from movies
                      (or)
@@ -41,6 +41,32 @@ git log                : to show commit information
 git log --oneline      : to show commits on single line
 git log --oneline -2   : to show last 2 commits in single line 
 git rm --cached file   : to untrack the tracked files
+
+CONFIGURATION OF USER:
+git config user.name "masthan"
+git config user.email "masthan@gmail.com"
+
+git branch                      : to show list of branches
+git branch branch_name          : to create a new branch
+git checkout branch_name        : to switch to a branch
+git checkout -b branch_name     : to create and switch to a branch at a time
+git branch -m old_name new_name : to rename a branch
+git branch -D branch_name       : to delete a branch
+
+GIT MERGE     : used to add files blw two branches.
+git checkout master
+git merge movies -- > all the files from movies branch will merge to master branch
+git merge recharge
+
+GIT REBASE: used to add files blw two branches.
+git rebase train
+git rebase dth
+
+git stash	: to hide the files
+git stash apply	: to get the hidden files back
+git stash list	: to show list of stashes
+git stash clear	: to delete all stashes
+git stash pop	: to delete last stash only.
 
 
 
