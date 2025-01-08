@@ -1,15 +1,32 @@
                                                           [GIT]
-git init        : Initialize a New Repository
+git init        : Initialize a New Repository (*)
 git status      : to check status of file
 git add file1   : to track the file
-git add *       : to track all files
+git add *       : to track all files (*)
 
 git rm --cached file1        : to untrack file
 git rm --cached *            : to untrack all files
-git commit -m "msg" file1    : to commit the file
+git commit -m "msg" file1    : to commit the file (*)
 git log                      : to show commit info
 git log --oneline            : to show commits on single line
 git log --oneline -3         : to show lost 3 lines in single line
 
 git config user.name "masthan"       : 
 git config user.email "masthan@vali" :
+
+           ------------------------------------------------- [GIT-HUB] --------------------------------------------------------       
+
+git branch           : to list the branch
+git branch masthan   : to create branch
+git checkout masthan : to switch masthan branch
+
+
+
+
+
+
+
+
+
+
+
