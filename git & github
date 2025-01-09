@@ -37,7 +37,8 @@ git stash       : to hide the files
 git stash apply	: to get the hidden files back
 git stash list	: to show list of stashes
 git stash clear	: to delete all stashes
-git stash pop   : to delete last stash only.
+git stash clear masthan	: to delete particular stashes
+git stash pop           : to delete last stash only.
 
 Note: if the file is committed we con't stash them.
 
