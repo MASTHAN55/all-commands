@@ -29,7 +29,7 @@ git merge movies           : copy files from movies
 git rebase movies          : copy files from movies
 git revert movies          : un-merge movies file (delete)
 git branch -m master main  : rename the branch master to main
-git branch -D master       : to delete branch
+git branch -D master       : to delete master branch
 
 ------------------------------------------------
 touch file1    : to create a file
