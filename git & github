@@ -16,11 +16,12 @@ git config user.email "masthan@vali" :
 
            ------------------------------------------------- [GIT-HUB] --------------------------------------------------------       
 
-git branch            : to list the branch
-git branch masthan    : to create new branch
-git checkout masthan  : to switch masthan branch
-                    (or)
-git checkout -b paytm  : create paytm branch & switch at a time
+git branch                      : to show list of branches
+git branch branch_name          : to create a new branch
+git checkout branch_name        : to switch to a branch
+git checkout -b branch_name     : to create and switch to a branch at a time
+git branch -m old_name new_name : to rename a branch
+git branch -D branch_name       : to delete a branch
 
 git push origin master     : code pushing to master github
 git clone "copy repo link" : source code copy from github to local
@@ -30,6 +31,15 @@ git rebase movies          : copy files from movies
 git revert movies          : un-merge movies file (delete)
 git branch -m master main  : rename the branch master to main
 git branch -D master       : to delete master branch
+
+
+git stash       : to hide the files
+git stash apply	: to get the hidden files back
+git stash list	: to show list of stashes
+git stash clear	: to delete all stashes
+git stash pop   : to delete last stash only.
+
+Note: if the file is committed we con't stash them.
 
 ------------------------------------------------
 touch file1    : to create a file
