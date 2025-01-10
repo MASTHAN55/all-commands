@@ -26,9 +26,11 @@ git branch -D branch_name       : to delete a branch
 git push origin master     : code pushing to master github
 git clone "copy repo link" : source code copy from github repo to local
 git pull origin master     : source code copy from github file to local
-git merge movies           : copy files from movies
+
+git merge movies           : copy files from movies (for public repo)
                      (or)
-git rebase movies          : copy files from movies
+git rebase movies          : copy files from movies (for private repo)
+
 git revert movies          : un-merge movies file (delete)
 git branch -m master main  : rename the branch master to main
 git branch -D master       : to delete master branch
