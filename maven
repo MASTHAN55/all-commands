@@ -11,4 +11,4 @@ PRATCICAL PART:
 4. mvn install : used to copy artifact to .m2 (project folder -- > .m2)
 5. mvn clean   : to delete the target folder
 
-6. mvn clean package: compile -- > package
+6. mvn clean package: compile -- > package [for all at a time]
