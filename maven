@@ -1,3 +1,9 @@
+PRATCICAL PART:
+1. CREATE AN EC2 INSTANCE AND CONNECT
+2. yum install git java-1.8.0-openjdk maven tree -y
+3. git clone https://github.com/devopsbyraham/jenkins-java-project.git
+4. cd jenkins-java-project
+
 1. mvn compile : used to compile the code (.java [src] -- > .class [target])
 2. mvn test    : used to test the code    (.java [test] -- > .class [target])
 3. mvn package : used to create artifact 
