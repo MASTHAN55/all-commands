@@ -1,1 +1,6 @@
-
+1. mvn compile : used to compile the code (.java [src] -- > .class [target])
+2. mvn test    : used to test the code    (.java [test] -- > .class [target])
+3. mvn package : used to create artifact 
+4. mvn install : used to copy artifact to .m2 (project folder -- > .m2)
+5. mvn clean   : to delete the target folder
+6. mvn clean package: compile -- > package
