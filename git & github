@@ -45,7 +45,7 @@ Note: if the file is committed we con't stash them.
 
 git fetch                 : show the difference of content from files git hub to git.
 git cherry-pick commit_id : merge particular file in branch
-vim .ignore               : ignore commit & track files.
+vim .gitignore            : ignore commit & track files.
 
 
 ------------------------------------------------
