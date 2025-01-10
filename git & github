@@ -47,6 +47,14 @@ git fetch      : show the difference of content from files git hub to git.
 
 
 ------------------------------------------------
+
+
+
+
+
+
+
+
 touch file1    : to create a file
 git status     : to show status of a file
 git add file1  : to track the file
