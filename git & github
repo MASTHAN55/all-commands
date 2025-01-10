@@ -46,6 +46,8 @@ Note: if the file is committed we con't stash them.
 git fetch                 : show the difference of content from files git hub to git.
 git cherry-pick commit_id : merge particular file in branch
 vim .gitignore            : ignore commit & track files.
+git restore file1         : restore deleted file.
+git restore --staged file : user for tracked file to untracked file.
 
 
 ------------------------------------------------
