@@ -32,18 +32,20 @@ Note:
   2. we con't delete current workspace, we can switch and delete.
   3. we con't delete default workspace.
 
-6. s3 Backend setup:
+6. s3 Backend setup(state file backup to s3 for all users):
    1. create one-s3 bucket(manual).
-   2. 
-   1. it will store terraform statefile in bucket.
-   2. when we modify the infra it will update the statefile in bucket.
+   2. "" follow manual guide for code""
+   3. terraform init -migrate-state -auto-approve       : share info to s3 bucket...   [got to official web "backend code:s3" for code].
+Note:
+  1. it will store terraform statefile in bucket.
+  2. when we modify the infra it will update the statefile in bucket.
 
-terraform state show aws_vpc.two                         : show selected info.
-terraform state mv aws_subnet.two aws_subnet.three       : to move state info from one to another.
-terraform state rm aws_subnet.three                      : to remove state info of a resource.
-terraform state pull                                     : just print info form s3-bucket.
-terraform init -migrate-state -auto-approve              : store info to s3 bucket...   [got to official web "backend code:s3" for code].
-terraform init -upgrate                                  : upgrate new version. 
+     terraform state list                                     : to list the resources.
+     terraform state show aws_vpc.two                         : show selected info.
+     terraform state mv aws_subnet.two aws_subnet.three       : to rename state file.
+     terraform state rm aws_subnet.three                      : to remove state info of a resource.
+     terraform state pull                                     : just print info form s3-bucket.
+     terraform init -upgrate                                  : upgrate new version. 
 
 terraform providers                                      : show all providers. 
 terraform refresh                                        : refresh the state file.
