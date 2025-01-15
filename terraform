@@ -18,8 +18,8 @@
 
 4. taint & replace (replace old code to new code):
     terraform state list                                               : list the resources.
-    terraform apply -replace="aws_instance.one[0]" --auto-approve      : recreate selected one. (new version)
-    terraform taint aws_vpc.one[0]                                     : recreate selected resource. (old version)
+    terraform apply -replace="aws_instance.one[0]" --auto-approve      : recreate selected one. (new version command)
+    terraform taint aws_vpc.one[0]                                     : recreate selected resource. (old version command)
   
 5. workspace:
     terraform workspace new dev         : creating new workspace.
@@ -27,6 +27,10 @@
     terraform workspace select dev      : switch to dev workspace.
     terraform workspace show            : show current workspace.
     terraform workspace delete dev      : delete dev workspace.
+Note:
+  1. we need to empty the workspace before delete.
+  2. we con't delete current workspace, we can switch and delete.
+  3. we con't delete default workspace.
 
 terraform state show aws_vpc.two                         : show selected info.
 terraform state mv aws_subnet.two aws_subnet.three       : to move state info from one to another.
