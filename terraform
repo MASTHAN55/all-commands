@@ -45,8 +45,13 @@ Note:
      terraform state mv aws_subnet.two aws_subnet.three       : to rename state file.
      terraform state rm aws_subnet.three                      : to remove state info of a resource.
      terraform state pull                                     : just print info form s3-bucket.
-     terraform init -upgrate                                  : upgrate new version. 
 
-terraform providers                                      : show all providers. 
-terraform refresh                                        : refresh the state file.
-terraform plan -generate-config-out=ec2.tf               : transfor info server to terraform, generated__ by Terraform (cat ec2.tf).
+7. updates(update old version to new version terraform):
+     terraform init -upgrate                                  : upgrate new version and old version(this command use for both).
+
+8. providers:
+    terraform providers                               : show all providers. 
+
+9. refrash:
+    terraform refresh                                 : refresh the state file.
+    terraform plan -generate-config-out=ec2.tf        : transfor info server to terraform, generated__ by Terraform (cat ec2.tf).
