@@ -32,6 +32,12 @@ Note:
   2. we con't delete current workspace, we can switch and delete.
   3. we con't delete default workspace.
 
+6. s3 Backend setup:
+   1. create one-s3 bucket(manual).
+   2. 
+   1. it will store terraform statefile in bucket.
+   2. when we modify the infra it will update the statefile in bucket.
+
 terraform state show aws_vpc.two                         : show selected info.
 terraform state mv aws_subnet.two aws_subnet.three       : to move state info from one to another.
 terraform state rm aws_subnet.three                      : to remove state info of a resource.
