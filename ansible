@@ -1,8 +1,8 @@
-## ADHOC_COMMANDS
+## ADHOC_COMMANDS:
 ansible all -a "yum install git -y"               : installing git at a time all servers.
 ansible all -a "git -version"                     : checking version all servers at a time.
 
-## module.
+## module:
 ansible all -m yum -a "name=git state=present"           : installing git.
 ansible all -m yum -a "name=git state=absent"            : un-install git.
 
