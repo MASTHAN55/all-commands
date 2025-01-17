@@ -1,183 +1,180 @@
-COMMANDS:
-sudo -i       : to switch to root user.
-who/w         : to check users login info.
-clear/ctrl l  : to clear the screen.
-date          : to show date and time.
-ip addr       : to show the ip address.
-ip addr show  : to show the ip address.
-ifconfig      : to show the ip address.
-hostname -i   : to show the ip address.
+1. COMMANDS:
+    sudo -i       : to switch to root user.
+    who/w         : to check users login info.
+    clear/ctrl l  : to clear the screen.
+    date          : to show date and time.
+    ip addr       : to show the ip address.
+    ip addr show  : to show the ip address.
+    ifconfig      : to show the ip address.
+    hostname -i   : to show the ip address.
 
-hostnamectl set-hostname masthan         : to set hostname.
-timedatectl set-timezone Asia/Kolkata    : to set IST.
+    hostnamectl set-hostname masthan         : to set hostname.
+    timedatectl set-timezone Asia/Kolkata    : to set IST.
 
                           -------------------------------------- [FILE COMMANDS] ---------------------------------------------------------------------
-FILE COMMANDS: 
-touch file1     : to create a file.
-ls/ll           : to list the files.
-ll -a           : to show hidden files.
-cat file1       : to show the content.
-more file1      : to show the content.
-cat>>file1      : to insert the content.
-enter ctlr + d  : to save the content.
+2. FILE COMMANDS: 
+    touch file1     : to create a file.
+    ls/ll           : to list the files.
+    ll -a           : to show hidden files.
+    cat file1       : to show the content.
+    more file1      : to show the content.
+    cat>>file1      : to insert the content.
+    enter ctlr + d  : to save the content.
 
-cp file1 file2     : to copy content from file1 to file2.        [Don't need to create file2 manual, file2 automatically create after copy]
-mv file1 masthan   : to rename file1 as masthan.
-rm file1           : to remove file1.
-rm file2 -f        : to remove file2 forcefully.
-rm * -f            : to remove all files in that folder.
-rm java* -f        : to remove java name all files.
-touch file{1..100} : to create file1 to file100.
+    cp file1 file2     : to copy content from file1 to file2.   [Don't need to create file2 manual, file2 automatically create after copy]
+    mv file1 masthan   : to rename file1 as masthan.
+    rm file1           : to remove file1.
+    rm file2 -f        : to remove file2 forcefully.
+    rm * -f            : to remove all files in that folder.
+    rm java* -f        : to remove java name all files.
+    touch file{1..100} : to create file1 to file100.
                                                           
-head file1      : to print top 10 lines of a file.
-head -5 file1   : to print top 5 lines of a file.
-head -12 file1  : to print top 12 lines of a file.
-tail file1      : to print bottom 10 lines of a file.
-tail -5 file1   : to print bottom 5 lines of a file.
-tail -12 file1  : to print bottom 12 lines of a file.
+    head file1      : to print top 10 lines of a file.
+    head -5 file1   : to print top 5 lines of a file.
+    head -12 file1  : to print top 12 lines of a file.
+    tail file1      : to print bottom 10 lines of a file.
+    tail -5 file1   : to print bottom 5 lines of a file.
+    tail -12 file1  : to print bottom 12 lines of a file.
 
-sed -n '7,14p' file1    : to print from line 7 to 14.
-wc file1                : to print lines, words and characters.
-cat -n file1            : to print line numbers along with file.
+    sed -n '7,14p' file1    : to print from line 7 to 14.
+    wc file1                : to print lines, words and characters.
+    cat -n file1            : to print line numbers along with file.
 
                          -------------------------------------------------- [HAEDWARE COMMANDS] ----------------------------------------------------------------
-HAEDWARE COMMANDS:
-cat /proc/cpuinfo    : to show cpu information.
+3. HAEDWARE COMMANDS:
+    cat /proc/cpuinfo    : to show cpu information.
                 (or)
-lscpu                : to show cpu information.
+    lscpu                : to show cpu information.
 
-cat /proc/meminfo    : to show memory information.
+    cat /proc/meminfo    : to show memory information.
                 (or)
-lsmem                : to show memory information.
+    lsmem                : to show memory information.
 
-lsblk                : to show rom infromation.
+    lsblk                : to show rom infromation.
                 (or)
-fdisk -l             : to show rom information.
+    fdisk -l             : to show rom information.
 
-free                 : to show available ram information.
-df -h                : to show mount paths.
-du -sh               : to show disk useage of folder.
+    free                 : to show available ram information.
+    df -h                : to show mount paths.
+    du -sh               : to show disk useage of folder.
 
                        -------------------------------------------------- [EDITORS] -----------------------------------------------------------------------
-EDITORS: used to edit the files
-:w   : save
-:q   : quit
-:wq  : save & quit
-:wq! : forceful save and quit
+4. EDITORS: used to edit the files
+    :w   : save
+    :q   : quit
+    :wq  : save & quit
+    :wq! : forceful save and quit
 
 
-INSERT MODE:
-i	: to insert the content
-I	: starting of line
-A	: Ending of line.
-O	: New line above existing line
-o	: New line below existing line
+5. INSERT MODE:
+    i	: to insert the content
+    I	: starting of line
+    A	: Ending of line.
+    O	: New line above existing line
+    o	: New line below existing line
 
 
-COMMAND MODE:
-gg      : top of file
-shift g : bottom of file
-5gg     : takes to 5th line
-:5      : takes to 5th line
-yy      : copies single line
-3yy     : copies 3 lines
-p       : paste single time
-3p      : paste 3 times
-dd      : deletes single line
-3dd     : deletes 3 lines
-u       : undo
-/word   : to find for a word
+6. COMMAND MODE:
+    gg      : top of file
+    shift g : bottom of file
+    5gg     : takes to 5th line
+    :5      : takes to 5th line
+    yy      : copies single line
+    3yy     : copies 3 lines
+    p       : paste single time
+    3p      : paste 3 times
+    dd      : deletes single line
+    3dd     : deletes 3 lines
+    u       : undo
+    /word   : to find for a word
 
                            ------------------------------------------ [GREP] -------------------------------------------------------------
-GREP: Global Regular Expression Print(to search for a word).
-to search for a word
+7. GREP: Global Regular Expression Print (to search for a word).
                                                                        word = type what you search.            
-grep word file      : to search for a word
-grep word file -i   : i -- > to avoid case sensitive
-grep word file -ic  : c -- > to show count
-grep word file -iv  : v -- > to avoid the lines with that word 
+    grep word file      : to search for a word
+    grep word file -i   : i -- > to avoid case sensitive
+    grep word file -ic  : c -- > to show count
+    grep word file -iv  : v -- > to avoid the lines with that word 
 
-grep 'word1\|word2\|word3' file  : to search for multiple word
-grep word file1 -n               : to print words with line numbers
-grep word file1 file2            : to search single word in multiple files
-grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
+    grep 'word1\|word2\|word3' file  : to search for multiple word
+    grep word file1 -n               : to print words with line numbers
+    grep word file1 file2            : to search single word in multiple files
+    grep 'word1\|word2' file1 file2  : to search multiple words in multiple files
 
                           ------------------------------------------------ [SED -i] ----------------------------------------------------------
-SED: STREAM EDITOR(to find and replace the word).
-to find and replace words
-
-s: search
-g: global
-i: insert
-d: delete
-a: add
-1c: change 1st line
-
-sed -i 's/word1/word2/g' file1                  : to replace word1 with word2
-sed -i '4s/word1/word2/g' file1                 : to replace word1 with word2 4th lline
-sed -i 's/word1/word2/g; s/word3/word4/g' file1 : to replace multiple words
-sed -i '1c welcome to ccit' file1               : to replace a line
-sed -i '3d'                                     : deletes 3rd line
-sed -i '10a hello' file1                        : to add hello to 10th line
+8. SED: STREAM EDITOR (to find and replace the word)
+    s: search
+    g: global
+    i: insert
+    d: delete
+    a: add
+    1c: change 1st line
+ 
+    sed -i 's/word1/word2/g' file1                  : to replace word1 with word2
+    sed -i '4s/word1/word2/g' file1                 : to replace word1 with word2 4th lline
+    -i 's/word1/word2/g; s/word3/word4/g' file1 : to replace multiple words
+    sed -i '1c welcome to ccit' file1               : to replace a line
+    sed -i '3d'                                     : deletes 3rd line
+    sed -i '10a hello' file1                        : to add hello to 10th line
 
                    ------------------------------------------------ [CREATE USER] --------------------------------------------------
-CREATE USER:
-useradd masthan  : to create user  [whenever we create user "group & folder" create automatocally]
-passwd masthan   : to set password
-cat /etc/passwd  : to show list of users
-cat /etc/group	 : to show list of groups
-cat /etc/shadow	 : to show password information
-vim /etc/sudoers : to add user to sudo file
-su - masthan     : to login to raham user
-id Vijay         : to show Vijay user details
-groupadd devops	 : to create group called devops
+9. CREATE USER:
+    useradd masthan  : to create user  [whenever we create user "group & folder" create automatocally]
+    passwd masthan   : to set password
+    cat /etc/passwd  : to show list of users
+    cat /etc/group	 : to show list of groups
+    cat /etc/shadow	 : to show password information
+    vim /etc/sudoers : to add user to sudo file
+    su - masthan     : to login to raham user
+    id Vijay         : to show Vijay user details
+    groupadd devops	 : to create group called devops
 
-usermod -a -G devops Vijay   : to add vijay user to devops group
-useradd ram -e 2024-06-30    : user creation with exipry date.
-userdel Vijay                : to delete Vijay user
-groupadd masthan             : to create group
-groupdel Vijay               : to delete Vijay group
-gpasswd -d kiran devops      : to delete devops group from  kiran user
+    usermod -a -G devops Vijay   : to add vijay user to devops group
+    useradd ram -e 2024-06-30    : user creation with exipry date.
+    userdel Vijay                : to delete Vijay user
+    groupadd masthan             : to create group
+    groupdel Vijay               : to delete Vijay group
+    gpasswd -d kiran devops      : to delete devops group from  kiran user
 
                           ------------------------------------------- [FILE TYPES] ------------------------------------------------------
-FILE TYPES:
--	: regular file
-b	: blocked file
-c	: character file
-d	: directory
-l	: link file
+10. FILE TYPES:
+     -	: regular file
+     b	: blocked file
+     c	: character file
+     d	: directory
+     l	: link file
 
 
-Permission:
-r	: read	: 4
-w	: write	: 2
-x	: executable : 1
+11. Permission:
+     r	: read	: 4
+     w	: write	: 2
+     x	: executable : 1
 
-user & group & others
-rw-    r--     r--
+   user & group & others
+   rw-    r--     r--
 
-chmod 777 file1             : numerical method
-chmod u=rw,g=rwx,o=rx file1 : alphabetical method
+   chmod 777 file1             : numerical method
+   chmod u=rw,g=rwx,o=rx file1 : alphabetical method
 
-chown vijay:vijay file1     : to change ownership of a file
+   chown vijay:vijay file1     : to change ownership of a file
 
                  -------------------------------------------------- [NETWORK] ----------------------------------------------------------------
-NETWORK:
-ip addr       : to show the ip address
-ip addr show  : to show the ip address
-ifconfig      : to show the ip address
-hostname -i   : to show the ip address
-ping          : to check server response
-ps aux        : to show process information
-kill -9 pid   : to kill the process
-netstat       : to show active internet connections
+12. NETWORK:
+     ip addr       : to show the ip address
+     ip addr show  : to show the ip address
+     ifconfig      : to show the ip address
+     hostname -i   : to show the ip address
+     ping          : to check server response
+     ps aux        : to show process information
+     kill -9 pid   : to kill the process
+     netstat       : to show active internet connections
 
                             -------------------------------------------[SSH]--------------------------------------------------
 
-SSH:
-ssh user@host – connect to host as user
-ssh -p port user@host – connect to host on port port as user
-ssh-copy-id user@host – add your key to host for user to enable a keyed or passwordless login
+13. SSH:
+     ssh user@host – connect to host as user
+     ssh -p port user@host – connect to host on port port as user
+     ssh-copy-id user@host – add your key to host for user to enable a keyed or passwordless login
 
 
 
