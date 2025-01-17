@@ -1,8 +1,8 @@
-## ADHOC_COMMANDS:
+                                        [ADHOC_COMMANDS]
 ansible all -a "yum install git -y"               : installing git at a time all servers.
 ansible all -a "git -version"                     : checking version all servers at a time.
 
-## module:
+##                                        [MODULES]
 ansible all -m yum -a "name=git state=present"           : installing git.
 ansible all -m yum -a "name=git state=absent"            : un-install git.
 
@@ -11,7 +11,9 @@ ansible all -m service -a "name=httpd state=started"     : starting httpd.
 
 ansible all -m user -a "name=masthan state=present"      : creating user.
 ansible all -m group -a "name=devops state=present"      : creating group.
-ansible-playbook masthan.yml                             : eacute masthan.yml.
+
+                                          [PLAY-BOOK]
+ansible-playbook masthan.yml                             : eacute masthan.yml playbook.
 ansible-playbook masthan.yml --tags c,d                  : to execute the particular tags.
 ansible-playbook masthan.yml --skip-tags a,b             : skip selected tags.
 ansible all -a "cat /etc/passwd"                         : showing list of users. 
@@ -22,12 +24,32 @@ ansible-vault decrypt masthan.yml                     : decrypt the data.
 ansible-vault view  masthan.yml                       : show encrypt data without desrypt. 
 ansible-vault rekey masthan.yml                       : reset a apassword.
 
-ansible-vault create vali.yml                         : auto-decrypt.
-ansible-vault view vali.yml                           : 
-find . -type f -exec sed -i 's/present/absent/' {} \;           : change words multiple time at a time.
-ansible all --list-hosts                                        : show hosts list.
-ansible all -m setup                                            : show all info of worker node.
-ansible all -m setup | grep -i pkg                              : show particular info.
+ansible-vault create vali.yml                           : auto-decrypt.
+ansible-vault view vali.yml                             : 
+find . -type f -exec sed -i 's/present/absent/' {} \    : change words multiple time at a time.
+ansible all --list-hosts                                : show hosts list.
+ansible all -m setup                                    : show all info of worker node.
+ansible all -m setup | grep -i pkg                      : show particular info.
+
+##PLAYBOOK:
+- hosts: all
+  tasks:
+    - name: installing git
+      yum: name=git state=present
+
+    - name: installing https
+      yum: name=httpd state=present
+
+    - name: starting httpd
+      service: name=httpd state=started
+
+    - name: create user
+      user: name=masthan state=present
+
+    - name: copying a file
+      copy: src=index.html dest=/root
+
+
 
 
 
