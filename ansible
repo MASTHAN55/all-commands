@@ -1,34 +1,34 @@
-                                        [ADHOC_COMMANDS]
-ansible all -a "yum install git -y"               : installing git at a time all servers.
-ansible all -a "git -version"                     : checking version all servers at a time.
+1. ADHOC_COMMANDS:
+    ansible all -a "yum install git -y"               : installing git at a time all servers.
+    ansible all -a "git -version"                     : checking version all servers at a time.
 
-                                          [MODULES]
-ansible all -m yum -a "name=git state=present"           : installing git.
-ansible all -m yum -a "name=git state=absent"            : un-install git.
+2. MODULES:
+    ansible all -m yum -a "name=git state=present"           : installing git.
+    ansible all -m yum -a "name=git state=absent"            : un-install git.
 
-ansible all -m yum -a "name=httpd state=present"         : installing apache.
-ansible all -m service -a "name=httpd state=started"     : starting httpd.
+    ansible all -m yum -a "name=httpd state=present"         : installing apache.
+    ansible all -m service -a "name=httpd state=started"     : starting httpd.
 
-ansible all -m user -a "name=masthan state=present"      : creating user.
-ansible all -m group -a "name=devops state=present"      : creating group.
+    ansible all -m user -a "name=masthan state=present"      : creating user.
+    ansible all -m group -a "name=devops state=present"      : creating group.
 
-                                          [PLAY-BOOK]
-ansible-playbook masthan.yml                             : eacute masthan.yml playbook.
+3. PLAY-BOOK:
+    ansible-playbook masthan.yml                             : eacute masthan.yml playbook.
 
-##Tags:
-ansible-playbook masthan.yml --tags c,d                  : to execute the particular tags only.
-ansible-playbook masthan.yml --skip-tags a,b             : skip selected tags.
-ansible all -a "cat /etc/passwd"                         : showing list of users. 
+4. Tags:
+    ansible-playbook masthan.yml --tags c,d                  : to execute the particular tags only.
+    ansible-playbook masthan.yml --skip-tags a,b             : skip selected tags.
+    ansible all -a "cat /etc/passwd"                         : showing list of users. 
 
-ansible all -m ping                                   : check ssh connection connect are not.
+    ansible all -m ping                                   : check ssh connection connect are not.
 
-##Encryption:
-ansible-vault encrypt masthan.yml                     : encrypt the data.
-ansible-vault decrypt masthan.yml                     : decrypt the data. 
-ansible-vault view  masthan.yml                       : show encrypt data without decrypt. 
-ansible-vault rekey masthan.yml                       : reset a apassword.
-ansible-vault create vali.yml                           : auto-decrypt.
-ansible-vault view vali.yml                             : 
+5. Encryption:
+    ansible-vault encrypt masthan.yml                     : encrypt the data.
+    ansible-vault decrypt masthan.yml                     : decrypt the data. 
+    ansible-vault view  masthan.yml                       : show encrypt data without decrypt. 
+    ansible-vault rekey masthan.yml                       : reset a apassword.
+    ansible-vault create vali.yml                           : auto-decrypt.
+    ansible-vault view vali.yml                             : 
 
 find . -type f -exec sed -i 's/present/absent/' {} \    : change words multiple time at a time.
 ansible all --list-hosts                                : show hosts list.
