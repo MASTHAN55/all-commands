@@ -14,7 +14,9 @@ ansible all -m group -a "name=devops state=present"      : creating group.
 
                                           [PLAY-BOOK]
 ansible-playbook masthan.yml                             : eacute masthan.yml playbook.
-ansible-playbook masthan.yml --tags c,d                  : to execute the particular tags.
+
+Tags:
+ansible-playbook masthan.yml --tags c,d                  : to execute the particular tags only.
 ansible-playbook masthan.yml --skip-tags a,b             : skip selected tags.
 ansible all -a "cat /etc/passwd"                         : showing list of users. 
 
