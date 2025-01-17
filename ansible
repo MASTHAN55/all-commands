@@ -15,19 +15,21 @@ ansible all -m group -a "name=devops state=present"      : creating group.
                                           [PLAY-BOOK]
 ansible-playbook masthan.yml                             : eacute masthan.yml playbook.
 
-Tags:
+##Tags:
 ansible-playbook masthan.yml --tags c,d                  : to execute the particular tags only.
 ansible-playbook masthan.yml --skip-tags a,b             : skip selected tags.
 ansible all -a "cat /etc/passwd"                         : showing list of users. 
 
 ansible all -m ping                                   : check ssh connection connect are not.
+
+##Encryption:
 ansible-vault encrypt masthan.yml                     : encrypt the data.
 ansible-vault decrypt masthan.yml                     : decrypt the data. 
-ansible-vault view  masthan.yml                       : show encrypt data without desrypt. 
+ansible-vault view  masthan.yml                       : show encrypt data without decrypt. 
 ansible-vault rekey masthan.yml                       : reset a apassword.
-
 ansible-vault create vali.yml                           : auto-decrypt.
 ansible-vault view vali.yml                             : 
+
 find . -type f -exec sed -i 's/present/absent/' {} \    : change words multiple time at a time.
 ansible all --list-hosts                                : show hosts list.
 ansible all -m setup                                    : show all info of worker node.
