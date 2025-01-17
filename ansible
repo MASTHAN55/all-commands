@@ -3,6 +3,7 @@
     ansible all -a "git -version"                     : checking version all servers at a time.
 
 2. MODULES:
+    ansible all -m ping                                      : check ssh connection connect are not.
     ansible all -m yum -a "name=git state=present"           : installing git.
     ansible all -m yum -a "name=git state=absent"            : un-install git.
 
@@ -20,20 +21,25 @@
     ansible-playbook masthan.yml --skip-tags a,b             : skip selected tags.
     ansible all -a "cat /etc/passwd"                         : showing list of users. 
 
-    ansible all -m ping                                   : check ssh connection connect are not.
-
 5. Encryption:
     ansible-vault encrypt masthan.yml                     : encrypt the data.
     ansible-vault decrypt masthan.yml                     : decrypt the data. 
     ansible-vault view  masthan.yml                       : show encrypt data without decrypt. 
     ansible-vault rekey masthan.yml                       : reset a apassword.
-    ansible-vault create vali.yml                           : auto-decrypt.
-    ansible-vault view vali.yml                             : 
+    ansible-vault create vali.yml                         : auto-decrypt.
+    ansible-vault view vali.yml                           : 
 
 find . -type f -exec sed -i 's/present/absent/' {} \    : change words multiple time at a time.
 ansible all --list-hosts                                : show hosts list.
-ansible all -m setup                                    : show all info of worker node.
 ansible all -m setup | grep -i pkg                      : show particular info.
+
+6. setup module(used to print complete info of worker node):
+     ansible all -m setup                     : show all info of worker node.
+     ansible all -m setup | grep -i cpus      : show cpus info only
+     ansible all -m setup | grep -i pkg       : show pkg info only
+
+
+
 
 
 
