@@ -68,7 +68,7 @@
     * cd volume3                                                                         : switch to volume3
     * docker run -it --name cont4 --volumes-from cont3 ubuntu                            : attach volume cont3 to cont4
 
- mountpath:
+7. mountpath & copyfiles:
     * docker run -it --name cont5 --mount cont7 source=volume3,destination=/abc ubuntu   : copy volumes from cont7 to cont5. (do mount path of volume3)
 
     * cp * (copy mount path of volume)  (stay & Do root user)               : copy files from local to volume.
