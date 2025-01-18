@@ -74,15 +74,15 @@
     * docker run -it --name cont5 --mount cont7 source=volume3,destination=/abc ubuntu   : copy volumes from cont7 to cont5.
       (stay & Do, in volume3)
 
-    * cp * (copy mount path of volume)  (stay & Do root user)               : copy files from local to volume.
+    * cp * (copy mount path of volume)  (stay & Do in root user)            : copy files from local to volume.
     * cp * /root/      (stay & Do in volume)                                : copy files from volume to local.
     * docker run -it --name cont6 -v /root/:/masthan ubuntu                 : create & copy root files from local to cont6 at a time.
     * docker run -it --name jenkins -p 8080:8080 jenkins/jenkins:lts        : installing jenkins.
     * docker exec -it cont1 /bin/bash  (use after start container)          : login to container.
 
-               ------------------------------------------------------------------------------------------------------------------------------------
-docker system df                      : all info of (cont,images,volumes,build cache).
-docker system df -v                   : all info (cont,images,volumes,build cache).
+ 8. docker system commands:              
+     * docker system df              : all info of (cont,images,volumes,build cache).
+     * docker system df -v           : all info (cont,images,volumes,build cache).
 
 =================================================== (DOCKER-COMPOSE) ====================================================================
 
