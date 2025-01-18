@@ -58,7 +58,7 @@
     * docker update --cpus="0.2" --memory="200" "masthan:v1"                      : update cpus and memory size.  
     * docker run -it --name cont1 --volumes-from cont2 ubuntu                     : copy volumes one-volume to another volume.
 
-6. volumes creation:
+6. volumes creation (if we want to store data we can use volumes):
     * docker volume create volume3            : create volume with volume3 name.
     * docker volume ls                        : show all volumes (ll /var/lib/docker/volumes/volume2/_data) default path of volumes
     * docker volume inspect volume3           : all info of volume3 (mount-path of volume3).
@@ -73,7 +73,7 @@
 
     * cp * (copy mount path of volume)  (stay & Do root user)               : copy files from local to volume.
     * cp * /root/      (stay & Do volume)                                   : copy files from volume to local.
-    * docker run -it --name cont6 -v /root/:/xyz ubuntu                     : create & copy root files from local to cont6 at a time.
+    * docker run -it --name cont6 -v /root/:/masthan ubuntu                 : create & copy root files from local to cont6 at a time.
     * docker run -it --name jenkins -p 8080:8080 jenkins/jenkins:lts        : installing jenkins.
     * docker exec -it cont1 /bin/bash  (use after start container)          : login to container.
 
