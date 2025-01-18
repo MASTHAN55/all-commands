@@ -61,14 +61,14 @@
 6. volumes creation:
     * docker volume create volume3            : create volume with volume3 name.
     * docker volume ls                        : show all volumes (ll /var/lib/docker/volumes/volume2/_data) default path of volumes
-
-   mountpath:
     * docker volume inspect volume3           : all info of volume3 (mount-path of volume3).
     * docker volume rm volume3                : remove volume.
 
     * docker run -it --name cont3 -v volume2 ubuntu                                      : create cont3 with volume.
     * cd volume3                                                                         : switch to volume3
-    * docker run -it --name cont4 --volumes-from cont3 ubuntu                            : attach volume cont3 to cont4 . 
+    * docker run -it --name cont4 --volumes-from cont3 ubuntu                            : attach volume cont3 to cont4
+
+ mountpath:
     * docker run -it --name cont5 --mount cont7 source=volume3,destination=/abc ubuntu   : copy volumes from cont7 to cont5. (do mount path of volume3)
 
     * cp * (copy mount path of volume)  (stay & Do root user)               : copy files from local to volume.
