@@ -154,23 +154,6 @@ docker network rm masthan                       : remove network.
 
 
 
-FROM          : used to base image.
-RUN           : used to run run linux commands(During image creation).
-CMD           : used to run run linux commands(After image creation).
-ENTRYPOINT    : high priority than cmd.
-COPY          : to copy local files to conatiner.
-ADD           : to copy internet files to conatiner.
-WORKDIR       : to open req directory.
-LABEL         : to add labels for docker images.
-ENV           : to set env variables (inside container).
-ARGS          : to pass env variables (outside containers).
-EXPOSE        : to give port number.
-
-
-
-
-
-
 
 
 
