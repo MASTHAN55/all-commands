@@ -154,7 +154,7 @@
 
 Note: if we delete a container it will recreate automatically itself. it is called self healing.
 
-============================================================= NETWORK ======================================================
+============================================================= CUSTOM NETWORK ======================================================
 
 1. Bridge network(communicate same server only):
     * docker network create masthan         : creating masthan network.
