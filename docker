@@ -146,7 +146,7 @@ docker service logs movies       : to see the logs.
 docker service rm movies         : to delete the services.
 
 ============================================================= NETWORK ======================================================
-docker netework ls            : show all networks.
+docker network ls            : show all networks.
 docker network create masthan 
 docker network inspect
 docker run -itd  --name cont1 -p 81:80 masthan733/movies:v1
