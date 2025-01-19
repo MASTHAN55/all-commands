@@ -91,7 +91,7 @@
 =================================================== (DOCKER-COMPOSE) ====================================================================
 1. install docker compose for script.
 
-2. 
+2. commands:
    * docker-compose up -d            : to create and start all containers.
    * docker-compose stop             : stop all containers.
    * docker-compose start            : start all containers.
@@ -136,7 +136,7 @@ docker service create --name movies --replicas 3 -p 81:80 masthan733/movies:late
 docker service ls                        : show all servers.
 docker service ps movies                 : list the containers of movies.
 dokcer service inspect movies            : complete info of movies service.
-docker service scale movies=10	         : to scale in the containers (increase service).
+docker service scale movies=10	        : to scale in the containers (increase service).
 docker service scale movies=3            : to scale out the containers (decrease service).
 
 
