@@ -162,7 +162,7 @@ Note: if we delete a container it will recreate automatically itself. it is call
     * docker inspect cont1 cont2            : show all info of cont and cont2 (by default cont's create bridge network).
     * docker network connect cont1 masthan  : connecting container cont1 to masthen network (masthan network is a "custom network")
 
-2. Do step by step:
+1.1 Do step by step:
     * docker exec -it cont1 /bin/bash         : login cont1 server.
     * apt update                              : updateing apt ---> (mandatory)
     * apt install iputils-ping -y             : install ping package.
