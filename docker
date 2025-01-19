@@ -89,6 +89,8 @@
     * docker run -itd --name cont1 -p 81:80 train:v1
 
 =================================================== (DOCKER-COMPOSE) ====================================================================
+## multiple services and single server:
+
 1. install docker compose for script.
 
 2. commands:
@@ -126,26 +128,59 @@
     * gzip abc.tar abc.tar.gz                        : convert to tar to gz file. 
 
 =========================================================== SWARM =================================================================
+## multipe services and multiple servers(high availability):
 
-docker swarm init (manager)                      : install swarm plugins. 
--- > copy-paste the token to worker nodes
-docker node ls                                   : show all connected nodes.
-docker swarm leave -f                                          : 
+1. Do master node:
+    * docker swarm init                             : install swarm plugins. 
+      -- > copy & paste the token on worker nodes
+    * docker node ls                                : show all connected nodes.
+    * docker node inspect (copy nide id)            : will show all info of node
 
-docker service create --name movies --replicas 3 -p 81:80 masthan733/movies:latest              //  
-docker service ls                        : show all servers.
-docker service ps movies                 : list the containers of movies.
-dokcer service inspect movies            : complete info of movies service.
-docker service scale movies=10	        : to scale in the containers (increase service).
-docker service scale movies=3            : to scale out the containers (decrease service).
+2. Do worker node:
+    * docker swarm leave -f                         : will remove worker node from master node.
 
+3. replicas(service commands will work manager node only):
+    * docker service create --name movies --replicas 3 -p 81:80 masthan733/movies:latest  
 
-docker service scale movies=3    : to scale out the containers.
-docker service rollback movies   : to go previous state.
-docker service logs movies       : to see the logs.
-docker service rm movies         : to delete the services.
+    * docker service ls                : show all servers.
+    * docker service ps movies         : list the containers of movies.
+    * dokcer service inspect movies    : complete info of movies service.
+    * docker service scale movies=5    : to scale in the containers (increase service).
+    * docker service scale movies=3    : to scale out the containers (decrease service).
+
+    * docker service rollback movies   : to go previous state.
+    * docker service logs movies       : to see the logs.
+    * docker service rm movies         : to delete the services(if we delete "service", containers automatically deleted, will not replicate).
+
+Note: if we delete a container it will recreate automatically itself. it is called self healing.
 
 ============================================================= NETWORK ======================================================
+
+1. Bridge network(communicate same server only):
+    * docker network create masthan         : creating masthan network.
+    * docker network inspect masthan        : show all info of masthen network.
+    * docker inspect cont1 cont2            : show all info of cont and cont2 (by default cont's create bridge network).
+    * docker network connect cont1 masthan  : connecting container cont1 to masthen network (masthan network is a "custom network")
+
+2. Do step by step:
+    * docker exec -it cont1 /bin/bash         : login cont1 server.
+    * apt update                              : updateing apt ---> (mandatory)
+    * apt install iputils-ping -y             : install ping package.
+    * ping (copy ipv4 of cont2)               : communication checking from cont1 to cont2.
+    * docker network disconnect masthan cont2 : disconnecting cont2 from masthan network.
+    * docker network rm masthan               : remove masthan network. 
+
+
+2. overly network(communicate different servers):
+    * 
+
+3. hostnetwork:
+    * 
+4. none network(it will not expose outer world):
+    * 
+
+
+
 docker network ls            : show all networks.
 docker network create masthan 
 docker network inspect
@@ -154,10 +189,13 @@ docker inspect cont1
 
 docker network connect cont masthan 
 docker exec -it cont1 /bin/bash                 : login cont1 server.
-apt install iputils-ping -y                     : install ping package.
-ping [ip-adderss of server]                     : connecting to server.
-docker network disconnect cont masthan          : disconnect to server.
-docker network rm masthan                       : remove network.
+
+2. Download ping:
+    * apt install iputils-ping -y                     : install ping package.
+
+    * ping [ip-adderss of server]                     : connecting to server.
+    * docker network disconnect cont masthan          : disconnect to server.
+    * docker network rm masthan                       : remove network.
 
 
 
