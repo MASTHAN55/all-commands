@@ -63,15 +63,20 @@
   1. (multinode cluster):
        * kubectl get no                                              // show all nodes.
        * 
-       * kops edit ig --name=masthan.k8s nodes-us-east-1a            // editing node instance group.
-       * kops edit ig --name=masthan.k8s master-us-east-1a           // editing master instance group.
-       * kops updata cluster --name masthan.k8s nodes-us-east-1a     // updating cluster.
-       * kops rolling-update cluster                                 // Do after update.
+       * kops edit ig --name=masthan.k8s nodes-us-east-1a            : editing node instance group.
+       * kops edit ig --name=masthan.k8s master-us-east-1a           : editing master instance group.
+       * kops updata cluster --name masthan.k8s nodes-us-east-1a     : updating cluster.
+       * kops rolling-update cluster                                 : Do after update.
 
-       * kops update --name=masthan.k8s.local --yes --admin          // update cluster. 
-       * kops delete cluster --namemasthan.k8s.local --yes           // for delete cluster.
+       * kops update --name=masthan.k8s.local --yes --admin          : update cluster. 
+       * kops delete cluster --namemasthan.k8s.local --yes           : for delete cluster.
 
-       * kops delete cluster --name masthan641.k8s.local --state=s3://masthan641.k8s.local --yes   // delete total cluster at a time.
+       * kops delete cluster --name masthan641.k8s.local --state=s3://masthan641.k8s.local --yes   : delete total cluster at a time.
+
+  2. CREATING BUCKET (manual creating)
+      * aws s3api create-bucket --bucket masthan.k8s.local --region us-east-1
+      * aws s3api put-bucket-versioning --masthan.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
+      * export KOPS_STATE_STORE=s3://masthan.k8s.local
 
 ==============================================================================[]=============================================================================================
 * kubectl top po           // show metrics.
