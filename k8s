@@ -1,20 +1,20 @@
-1.imprative way (manual):
-  * kubectl run pod1 --image=nginx        // creating pod1
-  * kubectl get po                        // list all pods
-  * kubectl get pod -o wide               // info of pods
-  * kubectl delete pod pod1               // delete pod1
+1. imprative way (manual):
+    * kubectl run pod1 --image=nginx          : creating pod1 with base image.
+    * kubectl get po                          : list all pods.
+    * kubectl get pod -o wide                 : info of pods.
+    * kubectl delete pod pod1                 : delete pod1.
 
-2.decralative way (manifest file -automate):
-  * kubectl create -f pod.yml             // executing file & creating pod.
-  * kubectl api-resources                 // show all shortcuts.
+2. declarative way (manifest file -automate)  
+    * kubectl create -f pod.yml               : executing file & creating pod.
+    * kubectl api-resources                   : show all shortcuts.
 ============================================================================= [REPLICASET] =============================================================================  
 3.peplikaset(rs):
-  * kubectl get po --show-labels              // show labels of pod.
-  *
-  * kubectl describe po -l tier=vali          // show only tier=vali labels of pod.
-  * kubectl delete pod -l tier!=vali          // delete all pods.
-  * kubectl delete po pod1                    // for delete pod.
-  * kubectl scale rc/movies --replicas=10     // create 10 pods at a time.
+   * kubectl get po --show-labels            : show labels of pod.
+   *
+   * kubectl describe po -l tier=vali        : show only tier=vali labels of pod.
+   * kubectl delete pod -l tier!=vali        : delete all pods.
+   * kubectl delete po pod1                  : for delete pod.
+   * kubectl scale rc/movies --replicas=10   : create 10 pods at a time.
 
 ============================================================================== [DEPLOYMENT] ===============================================================================
 4.deployment (roling statagy).
