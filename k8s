@@ -1,6 +1,6 @@
                                                             (minikube)
 1. imprative way (manual):
-    * kubectl run pod1 --image=nginx          : creating pod1 with base image.
+    * kubectl run pod1 --image nginx          : creating pod1 with base image.
     * kubectl get po                          : list all pods.
     * kubectl get po -o wide                  : info of pods.
     * kubectl delete po pod1                  : delete pod1.
@@ -9,25 +9,40 @@
 2. declarative way (manifest file -automate)  
     * kubectl create -f pod.yml               : executing file & creating pod.
     * kubectl api-resources                   : show all shortcuts.
+
+3. kubectl api-resources                      : use case
+
 ============================================================================= [REPLICASET] =============================================================================  
-3.peplikaset(rs):
-   * kubectl get po --show-labels            : show labels of pod.
-   *
-   * kubectl describe po -l tier=vali        : show only tier=vali labels of pod.
-   * kubectl delete pod -l tier!=vali        : delete all pods.
-   * kubectl delete po pod1                  : for delete pod.
-   * kubectl scale rc/movies --replicas=10   : create 10 pods at a time.
+3. replikaset(rs):
+    * kubectl get po --show-labels            : show labels of pod.
+    * kubectl get rs                          : show all replicas.
+    * kubectl get rs -o wide                  : show all info of replicas
+    * kubectl describe rs movies              : show all info of movies
+    * kubectl get po --show-labels            : show all labels
+
+    * kubectl describe po -l tier=vali        : show only tier=vali labels of pod.
+    * kubectl delete pod -l tier!=vali        : delete all pods which not has tair.
+ 
+    * kubectl delete po pod1                  : for delete pod.
+    * kubectl scale rc/movies --replicas=10   : create 10 pods at a time.
+    * kubectl edit rs/movies                  : edit replicas (rs con't have rollback option)
+    * kubectl describe po | grep -i image     : show current image & check edited updates.
 
 ============================================================================== [DEPLOYMENT] ===============================================================================
-4.deployment (roling statagy).
-  * kubectl get deploy                        // show all depolyment list.
-  * kubectl get deploy -o deploy              // sho wall onfo of deploy.
-  * kubectl edit deploy/movies                // edit movies deploy.
-  * kubectl roolout history deploy/movies     // 
-  * kubectl rollout undo deploy/movies        // back to old (role back).
-  * kubectl rollout status deploy/movies      // 
-  * kubectl rollout pause deploy/movies       // cont switch role back.
-  * kubectl rollout resume deploy movies      // give switching permissions.
+4. deployment (roling statagy).
+    * kubectl get deploy                        : show all depolyment list.
+    * kubectl get deploy -o deploy              : sho wall onfo of deploy.
+
+    * kubectl edit deploy/movies                : edit movies deploy.
+    * kubectl roolout history deploy/movies     : show all history of movies.
+    * kubectl rollout undo deploy/movies        : back to old (role back).
+    * kubectl rollout status deploy/movies      : 
+    * kubectl rollout pause deploy/movies       : cont switch role back.
+    * kubectl rollout resume deploy movies      : give switching permissions.
+
+    * kubectl scale deploy/movies --replicas=10 : increase the replicas.
+    * kubectl rollout undo deploy/movies        : back to old (role back).
+  
 =============================================================================[NAME-SPACESES]====================================================================================================
 5.
   * kubectl create ns dev     // create dev name space.
