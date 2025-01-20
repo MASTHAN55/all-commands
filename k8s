@@ -64,7 +64,7 @@
        * kubectl get no                                              : show all nodes.
        * 
   2. edting:
-       * kops edit ig --name=masthan.k8s nodes-us-east-1a            : editing node instance group.
+       * kops edit ig --name=masthan.k8s nodes-us-east-1a            : editing slave node instance group.
        * kops edit ig --name=masthan.k8s master-us-east-1a           : editing master instance group.
 
   3. updating & deleting:
