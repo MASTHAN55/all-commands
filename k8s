@@ -81,12 +81,13 @@
   4. delete total cluster:
       * kops delete cluster --name masthan641.k8s.local --state=s3://masthan641.k8s.local --yes   : delete total cluster at a time.
 
-2. INSTALL KUBECTL AND KOPS (manual creating)
-    * curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-    * wget https://github.com/kubernetes/kops/releases/download/v1.25.0/kops-linux-amd64
-    * chmod +x kops-linux-amd64 kubectl
-    * mv kubectl /usr/local/bin/kubectl
-    * mv kops-linux-amd64 /usr/local/bin/kops
+
+ 2. INSTALL KUBECTL AND KOPS (manual creating)
+     * curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+     * wget https://github.com/kubernetes/kops/releases/download/v1.25.0/kops-linux-amd64
+     * chmod +x kops-linux-amd64 kubectl
+     * mv kubectl /usr/local/bin/kubectl
+     * mv kops-linux-amd64 /usr/local/bin/kops
 
 2.1 setup path (manual path):
      vim .bashrc
@@ -98,15 +99,27 @@
       * aws s3api put-bucket-versioning --masthan.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
       * export KOPS_STATE_STORE=s3://masthan.k8s.local
 
-==============================================================================[]=============================================================================================
-* kubectl top po           // show metrics.
-* kubectl autoscale deployment movies-deploy --cpu-percent=20 --min=1 --max=10       // auto scaling
-* kubectl get po --watch           // do terminal
-* kubectl exec -it --name copy-podname -- /bin/bish     // login to particular pod
-* apt install stress -y
-* stress
-* copy example and paste 60sec
+=====================================================================[autoscale & metrics]=============================================================================================
+1. install metricserver for script(FOR KOPS):
+     * kubectl top po           : show metrics.
 
+2. horigental pod auto scaling:
+     * kubectl autoscale deployment movies-deploy --cpu-percent=20 --min=1 --max=10       : auto scaling
+
+     * kubectl get po --watch           : do terminal
+     * kubectl exec -it --name copy-podname -- /bin/bish     : login to particular pod
+
+3. installing stress:
+     * apt install stress -y
+     * stress
+     * copy example and paste 60sec
+
+               ex: pods ----> metric server ---> hpa
+                      ----------------------------------------------------------------------------------------------
+
+1. quotas:
+    * kubectl get quota      : show all quotas.
+    * kubectl get events     : show all info.
 
 ===================================================================================[r-back]===========================================================================
  1. Generate a key using OpenSSL: 
