@@ -59,6 +59,10 @@
     * kubectl delete ns dev                                       : delete dev namespace.
     * kubectl delete po --all -n dev                              : delete all in dev name space.
 
+6. service:(Do in name space)
+    * kubectl get svc                 : show all services.
+    * kubectl get svc,deploy          : show svc,deploy.
+
 ============================================================================= [kops] =================================================================================
   1. (multinode cluster):
        * kubectl get no                                              : show all nodes.
