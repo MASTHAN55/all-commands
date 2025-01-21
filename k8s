@@ -44,20 +44,20 @@
     * kubectl rollout undo deploy/movies        : back to old (role back).
   
 =============================================================================[NAME-SPACESES]====================================================================================================
-5.
-  * kubectl create ns dev     // create dev name space.
-  * kubectl get ns            // list all name spaces.
-  * kubectl po -A             // show all pods.
+5. namespace creation:
+    * kubectl create ns dev     : create dev name space.
+    * kubectl get ns            : list all name spaces.
+    * kubectl po -A             : show all pods.
 
-  * kubectl config set-context --current --namespace=dev        // switch one name space to dev name space.
-  * kubectl config view                                         // show current name space.
-  * kubectl run dev3 --image=masthan733/paytm:latest            // create pod in dev3 namespace.
-  * kubetcl get po -n dev                                       // list only dev namespace onfo. 
+    * kubectl config set-context --current --namespace=dev        : switch one name space to dev name space.
+    * kubectl config view                                         : show current name space.
+    * kubectl run dev3 --image=masthan733/paytm:latest            : create pod in dev3 namespace.
+    * kubetcl get po -n dev                                       : list only dev namespace onfo. 
 
-  * kubectl delete pod dev1 -n dev                              // delete pod in dev name space.
-  * kubectl delete pod --all                                    // delete all pods.
-  * kubectl delete ns dev                                       // delete dev namespace.
-  * kubectl delete po --all -n dev                              // delete all in dev name space.
+    * kubectl delete pod dev1 -n dev                              : delete pod in dev name space.
+    * kubectl delete pod --all                                    : delete all pods.
+    * kubectl delete ns dev                                       : delete dev namespace.
+    * kubectl delete po --all -n dev                              : delete all in dev name space.
 
 ============================================================================= [kops] =================================================================================
   1. (multinode cluster):
