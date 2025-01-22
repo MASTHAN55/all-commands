@@ -43,13 +43,14 @@
     * kubectl scale deploy/movies --replicas=10 : increase the replicas.
     * kubectl rollout undo deploy/movies        : back to old (role back).
   
-=============================================================================[NAME-SPACESES]====================================================================================================
-5. namespace creation:
+====================================================================[NAME-SPACESES & SERVICES]====================================================================================================
+5. namespace creation (name space can do isolate only):
     * kubectl create ns dev     : create dev name space.
     * kubectl get ns            : list all name spaces.
     * kubectl po -A             : show all pods.
 
     * kubectl config set-context --current --namespace=dev        : switch one name space to dev name space.
+    * kubectl config set-context --current --namespace=default    : switch one name space to dev name space.
     * kubectl config view                                         : show current name space.
     * kubectl run dev3 --image=masthan733/paytm:latest            : create pod in dev3 namespace.
     * kubetcl get po -n dev                                       : list only dev namespace onfo. 
@@ -59,9 +60,11 @@
     * kubectl delete ns dev                                       : delete dev namespace.
     * kubectl delete po --all -n dev                              : delete all in dev name space.
 
-6. service:(Do in name space)
+6. service:(Do in name space) used to expose the application.
     * kubectl get svc                 : show all services.
     * kubectl get svc,deploy          : show svc,deploy.
+    * kubectl get svc -o wide         : show all info. 
+    * kubectl apply -f abc.yml        : update(edits) manifest file.
 
 ============================================================================= [kops] =================================================================================
   1. (multinode cluster):
@@ -122,31 +125,33 @@
     * kubectl get events     : show all info.
 
 ===================================================================================[r-back]===========================================================================
- 1. Generate a key using OpenSSL: 
+1. mkdir dev1 && cd dev1
+
+1. Generate a key using OpenSSL: --------------(key)
     * openssl genrsa -out dev1.key 2048
 
-2. Generate a Client Sign Request (CSR) : 
+2. Generate a Client Sign Request (CSR) : ------(csr)
    * openssl req -new -key dev1.key -out dev1.csr -subj "/CN=dev1/O=group1"
-   * ls ~/.minikube/ 
+   * ls ~/.minikube/ (if you can see ca.key, ca.cert it's good)
 
 3. Generate the certificate (CRT): 
    * openssl x509 -req -in dev1.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out dev1.crt -days 500
                            ============================================================================================================
 ** Create a user
-1. Set a user entry in kubeconfig
+4. Set a user entry in kubeconfig
    kubectl config set-credentials dev1 --client-certificate=dev1.crt --client-key=dev1.key
 
-2.Set a context entry in kubeconfig
-  kubectl config set-context dev1-context --cluster=minikube --user=dev1            //finally usr created without role permmisions.
-  kubectl config view
+5. Set a context entry in kubeconfig
+   kubectl config set-context dev1-context --cluster=minikube --user=dev1            //finally usr created without role permmisions.
+   kubectl config view
 
-3.Switching to the created user
-  kubectl config use-context dev1-context
-  $ kubectl config current-context # check the current context
-  dev1-context
+6. Switching to the created user
+   kubectl config use-context dev1-context
+   $ kubectl config current-context # check the current context
+   dev1-context
                          ======================================================================================================
 ** Do minikube context. [ns,role,rolebind.. DO minikube  ]
-   kubectl config use-context minikube      //switch to minikube
+ 7. kubectl config use-context minikube      //switch to minikube
         //kubectl create ns dev
        //kubectl config set-context --current --namespace=dev
 
