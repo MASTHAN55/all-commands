@@ -127,35 +127,41 @@
 ===================================================================================[r-back]===========================================================================
 1. mkdir dev1 && cd dev1
 
-1. Generate a key using OpenSSL: --------------(key)
+1.1 Generate a key using OpenSSL: --------------(key)
     * openssl genrsa -out dev1.key 2048
 
 2. Generate a Client Sign Request (CSR) : ------(csr)
-   * openssl req -new -key dev1.key -out dev1.csr -subj "/CN=dev1/O=group1"
-   * ls ~/.minikube/ (if you can see ca.key, ca.cert it's good)
+    * openssl req -new -key dev1.key -out dev1.csr -subj "/CN=dev1/O=group1"
+    * ls ~/.minikube/ (if you can see "ca.key", "ca.cert" it's good)
 
 3. Generate the certificate (CRT): 
-   * openssl x509 -req -in dev1.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out dev1.crt -days 500
-                           ============================================================================================================
+    * openssl x509 -req -in dev1.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out dev1.crt -days 500
+                          
 ** Create a user
 4. Set a user entry in kubeconfig
-   kubectl config set-credentials dev1 --client-certificate=dev1.crt --client-key=dev1.key
+   * kubectl config set-credentials dev1 --client-certificate=dev1.crt --client-key=dev1.key
 
 5. Set a context entry in kubeconfig
-   kubectl config set-context dev1-context --cluster=minikube --user=dev1            //finally usr created without role permmisions.
-   kubectl config view
+   * kubectl config set-context dev1-context --cluster=minikube --user=dev1            //finally usr created without any permmisions.
+   * kubectl config view
 
 6. Switching to the created user
-   kubectl config use-context dev1-context
-   $ kubectl config current-context # check the current context
-   dev1-context
-                         ======================================================================================================
+   * kubectl config use-context dev1-context
+   * $ kubectl config current-context # check the current context
+   * dev1-context
+                         
 ** Do minikube context. [ns,role,rolebind.. DO minikube  ]
  7. kubectl config use-context minikube      //switch to minikube
-        //kubectl create ns dev
-       //kubectl config set-context --current --namespace=dev
+     * kubectl create ns dev
+     * kubectl config set-context --current --namespace=dev      //switch to dev context
 
-vim role.yml
+8. check all once:
+    1. switch dev-context
+    2. switch dev-namespace
+    3. switch dev-user
+ 
+
+vim role.yml (Do dev-user)
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -165,7 +171,7 @@ rules:
 - apiGroups: [""] # "" indicates the core API group
   resources: ["pods"]
   verbs: ["get", "watch", "list"]
-                                 ================================================================================================
+---                                 
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -180,10 +186,6 @@ roleRef:
   name: pod-reader # must match the name of the Role
   apiGroup: rbac.authorization.k8s.io 
                     =================================================================================================
- 1. switch dev-context
- 2. switch dev-namespace
- 3. switch dev-user
-  [check all once] 
 
 
 
