@@ -150,15 +150,22 @@
    * $ kubectl config current-context # check the current context
    * dev1-context
                          
-** Do minikube context. [ns,role,rolebind.. DO minikube  ]
- 7. kubectl config use-context minikube      //switch to minikube
+ 7. ** Do minikube context. [ns,role,rolebind.. DO minikube]
+     * kubectl config use-context minikube      //switch to minikube
      * kubectl create ns dev
      * kubectl config set-context --current --namespace=dev      //switch to dev context
 
 8. check all once:
-    1. switch dev-context
+    1. switch dev-context  (kubectl config view)
     2. switch dev-namespace
     3. switch dev-user
+
+9. Note:
+    1. if you want to give any permissions for role(like-create, delete) edit role first and give permissions(like-list, watch) 
+       you need to switch "minikube-context" and apply file and switch "minikube-context" to "dev-context".
+
+        * kubectl config use-context minikube  : switch to minikube context.
+        * kubectl apply -f role.yml            : update(edits) manifest file.
  
 
 vim role.yml (Do dev-user)
