@@ -126,8 +126,8 @@
     cat /etc/shadow	 : to show password information
     vim /etc/sudoers : to add user to sudo file
     su - masthan     : to login to raham user
-    id Vijay         : to show Vijay user details
-    groupadd devops	 : to create group called devops
+    id Vijay         : to show Vijay user all info
+    groupadd devops	 : to create group called devops 
 
     usermod -a -G devops Vijay   : to add vijay user to devops group
     useradd ram -e 2024-06-30    : user creation with exipry date.
